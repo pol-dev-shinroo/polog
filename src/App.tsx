@@ -1,9 +1,17 @@
 import React from "react";
+import tw from "tailwind-styled-components";
 
 function App() {
-  return (
-    <div className="font-sans text-xl text-red-800">This text will be red</div>
-  );
+  return <Container>This text will be red</Container>;
 }
+
+const Container = tw.div`
+    flex
+    items-center
+    justify-center
+    flex-col
+    w-full
+    bg-indigo-600
+`;
 
 export default App;
