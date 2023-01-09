@@ -1,2 +1,0 @@
-# polog
-blog
