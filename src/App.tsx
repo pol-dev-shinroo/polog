@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { flex, dark } from "./lib";
 import { Justify, Align, Direction } from "./types/flex";
 import { Dark } from "./types/dark";
+import { Grid } from "./elements";
 
 function App() {
   const [theme, setTheme] = useState<string | null>(null);
@@ -21,11 +22,11 @@ function App() {
   };
   return (
     <>
-      <Container
-        $align="center"
-        $justify="center"
-        $direction="column"
-        $dark={["bg-slate-800"]}
+      <Grid
+        align="center"
+        justify="center"
+        direction="column"
+        dark={["bg-slate-800"]}
       >
         This text will be red
         <MyBtn
@@ -36,29 +37,14 @@ function App() {
           Dark Mode
         </MyBtn>
         <Header>Hello world</Header>
-      </Container>
+      </Grid>
     </>
   );
 }
 
-interface ContainerProps {
-  $align?: Align;
-  $justify?: Justify;
-  $direction?: Direction;
-  $dark?: Dark;
-}
 interface MyBtnProps {
   $dark?: Dark;
 }
-
-const Container = tw.div<ContainerProps>`
-  ${({ $align, $justify, $direction }) =>
-    flex({ $justify, $align, $direction })}
-    bg-stone-200 "bg-slate-800"
-    ${({ $dark }) => $dark && dark($dark)}
-    h-screen
-    transition
-`;
 
 const MyBtn = tw.button<MyBtnProps>`
  ${({ $dark }) => $dark && dark($dark)}
