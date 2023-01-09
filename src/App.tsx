@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import tw from "tailwind-styled-components";
-import { flex } from "./lib";
+import styled from "styled-components";
+import { flex, dark } from "./lib";
 import { Justify, Align, Direction } from "./types/flex";
+import { Dark } from "./types/dark";
 
 function App() {
+  const [theme, setTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
     <>
-      <Container $align="center" $justify="center" $direction="column">
+      <Container
+        $align="center"
+        $justify="center"
+        $direction="column"
+        $dark={["bg-slate-800"]}
+      >
         This text will be red
+        <MyBtn
+          $dark={["bg-stone-200", "text-xs", "text-black", "rounded-3xl"]}
+          className="bg-slate-900 p-4 text-white"
+          onClick={handleThemeSwitch}
+        >
+          Dark Mode
+        </MyBtn>
+        <Header>Hello world</Header>
       </Container>
     </>
   );
@@ -17,11 +45,27 @@ interface ContainerProps {
   $align?: Align;
   $justify?: Justify;
   $direction?: Direction;
+  $dark?: Dark;
+}
+interface MyBtnProps {
+  $dark?: Dark;
 }
 
 const Container = tw.div<ContainerProps>`
   ${({ $align, $justify, $direction }) =>
     flex({ $justify, $align, $direction })}
+    bg-stone-200 "bg-slate-800"
+    ${({ $dark }) => $dark && dark($dark)}
+    h-screen
+    transition
+`;
+
+const MyBtn = tw.button<MyBtnProps>`
+ ${({ $dark }) => $dark && dark($dark)}
+`;
+
+const Header = styled.h1`
+  color: red;
 `;
 
 export default App;

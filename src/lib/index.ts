@@ -1,2 +1,5 @@
 import flex from "./flex";
-export { flex };
+import theme from "./theme";
+import dark from "./dark";
+
+export { flex, theme, dark };
