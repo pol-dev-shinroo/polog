@@ -1,19 +1,19 @@
 import { Justify, Align, Direction } from "../types/flex";
 
 interface IJustifySwitch {
-  (direction: Justify): string;
+  (direction?: Justify): string;
 }
 interface IAlignSwitch {
-  (direction: Align): string;
+  (direction?: Align): string;
 }
 interface IDirectionSwitch {
-  (direction: Direction): string;
+  (direction?: Direction): string;
 }
 
 interface IFlexParam {
-  justify?: Justify;
-  align?: Align;
-  direction?: Direction;
+  $justify?: Justify;
+  $align?: Align;
+  $direction?: Direction;
 }
 
 const justifySwitch: IJustifySwitch = (justify) => {
@@ -52,15 +52,15 @@ const directionSwitch: IDirectionSwitch = (direction) => {
 };
 
 const flex = ({
-  justify = "center",
-  align = "center",
-  direction = "row",
+  $justify = "center",
+  $align = "center",
+  $direction = "row",
 }: IFlexParam) => {
   return `
   flex
-  ${justifySwitch(justify)}
-  ${alignSwitch(align)}
-  ${directionSwitch(direction)}
+  ${justifySwitch($justify)}
+  ${alignSwitch($align)}
+  ${directionSwitch($direction)}
   `;
 };
 
