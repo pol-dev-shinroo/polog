@@ -1,43 +1,35 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import tw, { styled, css } from "twin.macro";
+import { Align, Justify, Direction } from "./models/types/flex";
+import flex from "./lib/flex";
+
+interface ContainerProps {
+  align?: Align;
+  justify?: Justify;
+  direction?: Direction;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <StyledInput>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </StyledInput>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container align="center" justify="center" direction="col">
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+    </Container>
   );
 }
 
-const StyledInput = styled.p`
-  color: black;
-  ${tw`
-        w-full
-        flex
-        flex-col
-        items-center
-        pt-3
-        pb-3 
-        md:mt-10
-        lg:mt-36
-        md:pl-24
-        md:pr-24
-    `}
-`;
+const Container = styled.div(
+  ({ align, justify, direction }: ContainerProps) => [
+    tw`
+     bg-slate-500
+       w-screen
+       h-screen
+       transition
+    `,
+    ...flex({ align, justify, direction }),
+  ]
+);
 
 export default App;
