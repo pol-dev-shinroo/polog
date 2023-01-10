@@ -1,65 +1,46 @@
-1. type paramter
+# Getting Started with Create React App
 
-In the TypeScript code useState<string | null>(null);, the angle brackets (<>) and the type inside of them (string | null) are called a type parameter.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-```js
-const identity = <T>(arg: T): T => {
-  return arg;
-};
-```
+## Available Scripts
 
-```js
-let output = identity < string > "hello"; // output is of type string
-let output = identity < number > 42; // output is of type number
-```
+In the project directory, you can run:
 
-You can also use type inference to specify the type argument automatically based on the type of the value passed as an argument. For example:
+### `npm start`
 
-```js
-let output = identity("hello"); // output is of type string
-let output = identity(42); // output is of type number
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Type parameters are a powerful tool in TypeScript that allow you to write generic, flexible code that can work with a variety of types.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-2. rest paramter
+### `npm test`
 
-The ...strings syntax is called the rest parameter syntax, and it allows you to capture a variable number of arguments in an array. When you call the myFunction function with multiple string arguments separated by commas, like this:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```js
-let output = myFunction("1", "2", "3");
-```
+### `npm run build`
 
-```js
-function myFunction(...strings: string[]): string {
-  return strings.map((s) => `dark:${s}`).join(" ");
-}
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-You can also pass an array of strings to the function using the spread operator (...):
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```js
-let strings = ["1", "2", "3"];
-let output = myFunction(...strings);
-console.log(output); // "dark:1 dark:2 dark:3"
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. && operator
+### `npm run eject`
 
-```js
-const Container =
-  tw.div <
-  ContainerProps >
-  `
-  ${({ $align, $justify, $direction }) =>
-    flex({ $justify, $align, $direction })}
-    bg-stone-200 "bg-slate-800"
-    ${({ $dark }) => $dark && dark($dark)}
-    h-screen
-    transition
-`;
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-You can fix this error by ensuring that $dark is not undefined before passing it to the dark function. You can do this by using the && operator to short-circuit the call to dark if $dark is undefined.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-=> This will only call the dark function if $dark is not undefined, which will satisfy the type checker.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

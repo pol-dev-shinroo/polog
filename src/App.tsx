@@ -1,57 +1,43 @@
-import React, { useState, useEffect } from "react";
-import tw from "tailwind-styled-components";
-import styled from "styled-components";
-import { flex, dark } from "./lib";
-import { Justify, Align, Direction } from "./types/flex";
-import { Dark } from "./types/dark";
-import { Grid } from "./elements";
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import tw, { styled, css } from "twin.macro";
 
 function App() {
-  const [theme, setTheme] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
   return (
-    <>
-      <Grid
-        align="center"
-        justify="center"
-        direction="column"
-        dark={["bg-slate-800"]}
-      >
-        This text will be red
-        <MyBtn
-          $dark={["bg-stone-200", "text-xs", "text-black", "rounded-3xl"]}
-          className="bg-slate-900 p-4 text-white"
-          onClick={handleThemeSwitch}
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <StyledInput>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </StyledInput>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Dark Mode
-        </MyBtn>
-        <Header>Hello world</Header>
-      </Grid>
-    </>
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
-interface MyBtnProps {
-  $dark?: Dark;
-}
-
-const MyBtn = tw.button<MyBtnProps>`
- ${({ $dark }) => $dark && dark($dark)}
-`;
-
-const Header = styled.h1`
-  color: red;
+const StyledInput = styled.p`
+  color: black;
+  ${tw`
+        w-full
+        flex
+        flex-col
+        items-center
+        pt-3
+        pb-3 
+        md:mt-10
+        lg:mt-36
+        md:pl-24
+        md:pr-24
+    `}
 `;
 
 export default App;
