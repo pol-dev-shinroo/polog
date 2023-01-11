@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react";
 import { dark } from "src/lib";
-import { TTextTag, TClassName, TDarkClasses } from "src/models";
+import { TTextTag, TClassName, TDarkClasses, TChildren } from "src/models";
 
 type Props = {
   tagName?: TTextTag;
-  children: React.ReactNode;
+  children: TChildren;
   className?: TClassName;
   lightClasses?: TDarkClasses;
   darkClasses?: TDarkClasses;

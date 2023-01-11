@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { darkAtom } from "src/atoms/dark";
 
-const useDark = (defaultValue: boolean) => {
-  const [isDark, setIsDark] = useState<boolean>(defaultValue);
+const useDark = () => {
+  const [isDark, setIsDark] = useRecoilState<boolean>(darkAtom);
 
   const toggleDark = () => {
     setIsDark((prev) => !prev);

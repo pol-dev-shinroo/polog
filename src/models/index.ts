@@ -39,3 +39,11 @@ export type TDarkProp = boolean | undefined;
 export type TBoxTag = "div" | "header";
 
 export type TTextTag = "h1" | "h2" | "h3" | "p" | "span";
+
+/*******************  Types for onClick **********************/
+
+export type TOnClick = () => void;
+
+/*******************  Types for children **********************/
+
+export type TChildren = React.ReactNode;
