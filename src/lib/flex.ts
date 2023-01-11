@@ -1,4 +1,4 @@
-import { Align, Justify, Direction } from "src/models/types";
+import { Align, Justify, Direction } from "src/models";
 import tw from "twin.macro";
 
 const alignSwitch = (align: Align) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { TDarkProp } from "src/models/types";
+import { TDarkProp } from "src/models";
 
 interface IDark {
   dark?: TDarkProp;

@@ -6,7 +6,7 @@ import {
   Direction,
   TClassName,
   TDarkClasses,
-} from "src/models/types";
+} from "src/models";
 import { flex, dark } from "src/lib/";
 
 interface GridProps {

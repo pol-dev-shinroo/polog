@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { dark } from "src/lib";
-import { TClassName, TDarkClasses, TBoxTag } from "src/models/types";
+import { TClassName, TDarkClasses, TBoxTag } from "src/models";
 
 type TBox = {
   tagName?: TBoxTag;

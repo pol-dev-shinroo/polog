@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { dark } from "src/lib";
-import { TTextTag, TClassName, TDarkClasses } from "src/models/types";
+import { TTextTag, TClassName, TDarkClasses } from "src/models";
 
 type Props = {
   tagName?: TTextTag;
