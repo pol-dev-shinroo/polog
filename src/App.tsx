@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { Grid, Dark } from "./elements";
 
 function App() {
+  const [isDark, setIsDark] = useState<boolean>(false);
+
+  const toggleDark = () => {
+    setIsDark((prev) => !prev);
+  };
   return (
-    <Dark dark={true}>
+    <Dark dark={isDark}>
       <Grid
         align="center"
         justify="center"
@@ -17,6 +23,12 @@ function App() {
         <h1>Hello world</h1>
         <h1>Hello world</h1>
         <h1>Hello world</h1>
+        <button
+          onClick={toggleDark}
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg"
+        >
+          toggle
+        </button>
       </Grid>
     </Dark>
   );
