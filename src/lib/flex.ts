@@ -1,4 +1,4 @@
-import { Align, Justify, Direction } from "src/models/types/flex";
+import { Align, Justify, Direction } from "src/models/types";
 import tw from "twin.macro";
 
 const alignSwitch = (align: Align) => {
@@ -21,6 +21,8 @@ const justifySwitch = (align: Justify) => {
       return tw`justify-end`;
     case "center":
       return tw`justify-center`;
+    case "between":
+      return tw`justify-between`;
     default:
       return;
   }

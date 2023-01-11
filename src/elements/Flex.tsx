@@ -1,16 +1,22 @@
 import React from "react";
 import { styled } from "twin.macro";
-import { Align, Justify, Direction } from "src/models/types/flex";
+import {
+  Align,
+  Justify,
+  Direction,
+  TClassName,
+  TDarkClasses,
+} from "src/models/types";
 import { flex, dark } from "src/lib/";
 
 interface GridProps {
   align?: Align;
   justify?: Justify;
   direction?: Direction;
-  className?: string;
+  className?: TClassName;
   children?: React.ReactNode;
-  lightClasses?: string[];
-  darkClasses?: string[];
+  lightClasses?: TDarkClasses;
+  darkClasses?: TDarkClasses;
 }
 interface ContainerProps {
   align?: Align;

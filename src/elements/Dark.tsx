@@ -1,7 +1,8 @@
 import React from "react";
+import { TDarkProp } from "src/models/types";
 
 interface IDark {
-  dark?: boolean | undefined;
+  dark?: TDarkProp;
   children?: React.ReactNode;
 }
 

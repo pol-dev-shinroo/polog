@@ -1,28 +1,26 @@
 import React, { forwardRef } from "react";
 import { dark } from "src/lib";
-import { TTextTag, TClassName, TDarkClasses } from "src/models/types";
+import { TClassName, TDarkClasses, TBoxTag } from "src/models/types";
 
-type Props = {
-  tagName?: TTextTag;
-  children: React.ReactNode;
+type TBox = {
+  tagName?: TBoxTag;
   className?: TClassName;
   lightClasses?: TDarkClasses;
   darkClasses?: TDarkClasses;
+  children?: React.ReactNode;
 };
 
-const Text: React.FC<Props> = forwardRef((props, ref) => {
+const Box: React.FC<TBox> = forwardRef((props, ref) => {
   const { tagName, children, className, lightClasses, darkClasses } = props;
 
   return React.createElement(
     tagName || "div",
     {
       ref,
-      className: tagName
-        ? dark({ lightClasses, darkClasses, className })
-        : "text-base font-normal",
+      className: dark({ lightClasses, darkClasses, className }),
     },
     children
   );
 });
 
-export default Text;
+export default Box;
