@@ -12,14 +12,37 @@ function App() {
         justify="between"
         lightClasses={["bg-gray-300"]}
         darkClasses={["dark:bg-gray-800"]}
-        className="h-24 w-full px-4"
+        className="h-24 w-full p-2 flex-wrap"
       >
-        <Box tagName="header" className="text-xl text-white">
-          Logo + Search
+        <Box
+          tagName="header"
+          className="bg-indigo-500 rounded-lg text-white flex-1 w-1/3 h-full border-red-800 border-2"
+        >
+          <Flex
+            align="center"
+            justify="center"
+            className="border-red-800 border-2 h-full w-full p-4"
+          >
+            Logo + Search
+          </Flex>
         </Box>
-        <Box className="text-xl text-white">Menu</Box>
-        <Box className="text-xl text-white">
-          <button onClick={toggleDark}>다크모드</button>
+        <Box className="bg-indigo-500 rounded-lg text-white w-1/2 h-full border-red-800 border-2">
+          <Flex
+            align="center"
+            justify="center"
+            className="border-red-800 border-2 h-full w-full p-4"
+          >
+            Menu
+          </Flex>
+        </Box>
+        <Box className="bg-indigo-500 rounded-lg text-white flex-1 w-1/3 h-full border-red-800 border-2">
+          <Flex
+            align="center"
+            justify="center"
+            className="border-red-800 border-2 h-full w-full p-4"
+          >
+            <button onClick={toggleDark}>다크모드</button>
+          </Flex>
         </Box>
       </Flex>
     </Dark>

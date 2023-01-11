@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import {
   Align,
   Justify,

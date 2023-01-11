@@ -5,9 +5,19 @@ interface IDark {
 }
 
 const dark = ({ lightClasses, darkClasses, className }: IDark) => {
+  let newClasses = "";
   const lightString = lightClasses?.join(" ");
+  if (lightString) {
+    newClasses += lightString + " ";
+  }
   const darkString = darkClasses?.join(" ");
-  const newClasses = className + " " + lightString + " " + darkString;
+  if (darkString) {
+    newClasses += darkString + " ";
+  }
+  if (className) {
+    newClasses += className + " ";
+  }
+
   return newClasses;
 };
 

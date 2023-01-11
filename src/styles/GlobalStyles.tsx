@@ -8,6 +8,9 @@ const CustomStyles = createGlobalStyle`
     -webkit-tap-highlight-color: ${theme`colors.purple.500`};
     ${tw`antialiased`}
   }
+  *{
+    ${tw`m-0 p-0 box-border`}
+  }
   h1 {
     ${tw`text-4xl font-bold`}
   }
