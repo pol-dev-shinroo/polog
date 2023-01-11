@@ -1,4 +1,4 @@
-import { Align, Justify, Direction } from "../models/types/flex";
+import { Align, Justify, Direction } from "src/models/types/flex";
 import tw from "twin.macro";
 
 const alignSwitch = (align: Align) => {

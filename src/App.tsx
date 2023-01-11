@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, Dark, Text } from "./elements";
+import { Flex, Dark, Text } from "src/elements";
 
 function App() {
   const [isDark, setIsDark] = useState<boolean>(false);
@@ -9,7 +9,7 @@ function App() {
   };
   return (
     <Dark dark={isDark}>
-      <Grid
+      <Flex
         align="center"
         justify="center"
         direction="col"
@@ -25,16 +25,34 @@ function App() {
         >
           Welcome to Polog
         </Text>
-        <Text tagName="h1">Welcome to Polog</Text>
-        <Text tagName="h1">Welcome to Polog</Text>
-        <Text tagName="h1">Welcome to Polog</Text>
+        <Text
+          tagName="h1"
+          lightClasses={["text-gray-800"]}
+          darkClasses={["dark:text-gray-200"]}
+        >
+          Welcome to Polog
+        </Text>
+        <Text
+          lightClasses={["text-gray-800"]}
+          darkClasses={["dark:text-gray-200"]}
+          tagName="h1"
+        >
+          Welcome to Polog
+        </Text>
+        <Text
+          lightClasses={["text-gray-800"]}
+          darkClasses={["dark:text-gray-200"]}
+          tagName="h1"
+        >
+          Welcome to Polog
+        </Text>
         <button
           onClick={toggleDark}
           className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg"
         >
           toggle
         </button>
-      </Grid>
+      </Flex>
     </Dark>
   );
 }

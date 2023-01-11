@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { dark } from "../lib";
+import { dark } from "src/lib";
 
 type Props = {
   tagName?: "h1" | "h2" | "h3" | "p" | "span";

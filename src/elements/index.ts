@@ -1,5 +1,5 @@
-import Grid from "./Grid";
+import Flex from "./Grid";
 import Dark from "./Dark";
 import Text from "./Text";
 
-export { Grid, Dark, Text };
+export { Flex, Dark, Text };

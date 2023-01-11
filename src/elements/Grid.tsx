@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "twin.macro";
-import { Align, Justify, Direction } from "../models/types/flex";
-import { flex, dark } from "../lib/";
+import { Align, Justify, Direction } from "src/models/types/flex";
+import { flex, dark } from "src/lib/";
 
 interface GridProps {
   align?: Align;
@@ -18,7 +18,7 @@ interface ContainerProps {
   direction?: Direction;
 }
 
-const Grid = ({
+const Flex = ({
   align,
   justify,
   direction,
@@ -45,4 +45,4 @@ const Container = styled.div(
   ]
 );
 
-export default Grid;
+export default Flex;
