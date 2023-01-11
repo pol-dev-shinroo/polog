@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "twin.macro";
 import { Align, Justify, Direction } from "../models/types/flex";
-import { flex, uniqueArray, darkComb, darkConvert } from "../lib/";
+import { flex, dark } from "../lib/";
 
 interface GridProps {
   align?: Align;
@@ -27,19 +27,12 @@ const Grid = ({
   lightClasses,
   darkClasses,
 }: GridProps) => {
-  const { uniqueLight, uniqueDark } = {
-    uniqueLight: uniqueArray<string>(lightClasses),
-    uniqueDark: uniqueArray<string>(darkClasses),
-  };
-
-  const darkConverted = darkConvert({ uniqueDark });
-
   return (
     <Container
       align={align}
       justify={justify}
       direction={direction}
-      className={darkComb({ uniqueLight, darkConverted, className })}
+      className={dark({ lightClasses, darkClasses, className })}
     >
       {children}
     </Container>

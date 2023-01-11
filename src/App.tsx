@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, Dark } from "./elements";
+import { Grid, Dark, Text } from "./elements";
 
 function App() {
   const [isDark, setIsDark] = useState<boolean>(false);
@@ -14,15 +14,20 @@ function App() {
         justify="center"
         direction="col"
         lightClasses={["bg-orange-50"]}
-        darkClasses={["bg-stone-700"]}
+        darkClasses={["dark:bg-stone-700"]}
         className="h-screen transition"
       >
-        <h1 className="text-gray-800 dark:text-gray-200 font-bold text-xl mb-2">
-          Hello world
-        </h1>
-        <h1>Hello world</h1>
-        <h1>Hello world</h1>
-        <h1>Hello world</h1>
+        <Text
+          tagName="h1"
+          lightClasses={["text-gray-800"]}
+          darkClasses={["dark:text-gray-200"]}
+          className="font-bold text-xl mb-2 "
+        >
+          Welcome to Polog
+        </Text>
+        <Text tagName="h1">Welcome to Polog</Text>
+        <Text tagName="h1">Welcome to Polog</Text>
+        <Text tagName="h1">Welcome to Polog</Text>
         <button
           onClick={toggleDark}
           className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg"

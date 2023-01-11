@@ -8,6 +8,21 @@ const CustomStyles = createGlobalStyle`
     -webkit-tap-highlight-color: ${theme`colors.purple.500`};
     ${tw`antialiased`}
   }
+  h1 {
+    ${tw`text-4xl font-bold`}
+  }
+  h2 {
+    ${tw`text-3xl font-medium`}
+  }
+  h3 {
+    ${tw`text-2xl font-medium`}
+  }
+  p {
+    ${tw`text-base font-normal`}
+  }
+  span {
+    ${tw`text-sm font-normal`}
+  }
 `;
 
 const GlobalStyles = () => (

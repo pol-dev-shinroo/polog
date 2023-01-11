@@ -1,6 +1,4 @@
 import flex from "./flex";
-import uniqueArray from "./uniqueArr";
-import darkComb from "./darkComb";
-import darkConvert from "./darkConvert";
+import dark from "./dark";
 
-export { flex, uniqueArray, darkComb, darkConvert };
+export { flex, dark };
