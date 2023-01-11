@@ -42,6 +42,7 @@ interface IFlex {
   direction?: Direction;
 }
 
+/** flex box function */
 const flex = ({ align, justify, direction }: IFlex) => {
   return [
     tw`flex`,

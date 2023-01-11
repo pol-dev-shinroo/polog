@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "twin.macro";
 import { Align, Justify, Direction } from "../models/types/flex";
-import { flex, dark, darkClassesCombine } from "../lib/";
+import { flex, uniqueArray, darkComb, darkConvert } from "../lib/";
 
 interface GridProps {
   align?: Align;
@@ -9,8 +9,7 @@ interface GridProps {
   direction?: Direction;
   className?: string;
   children?: React.ReactNode;
-  darkMode?: boolean;
-  lightClasses?: string[]; // set 으로 바꾸기! (중복 방지)
+  lightClasses?: string[];
   darkClasses?: string[];
 }
 interface ContainerProps {
@@ -25,21 +24,22 @@ const Grid = ({
   direction,
   className,
   children,
-  darkMode,
   lightClasses,
   darkClasses,
 }: GridProps) => {
-  const newClasses = darkClassesCombine({
-    lightClasses,
-    darkClasses,
-    className,
-  });
+  const { uniqueLight, uniqueDark } = {
+    uniqueLight: uniqueArray<string>(lightClasses),
+    uniqueDark: uniqueArray<string>(darkClasses),
+  };
+
+  const darkConverted = darkConvert({ uniqueDark });
+
   return (
     <Container
       align={align}
       justify={justify}
       direction={direction}
-      className={dark(darkMode, newClasses)}
+      className={darkComb({ uniqueLight, darkConverted, className })}
     >
       {children}
     </Container>
