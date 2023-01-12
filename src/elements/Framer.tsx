@@ -12,6 +12,8 @@ import {
   TLayout,
   TTransition,
   TZindex,
+  TAnimate,
+  TInitial,
 } from "src/models";
 
 type TFramer = {
@@ -27,6 +29,8 @@ type TFramer = {
   /** framer props */
   layout?: TLayout;
   framertransition?: TTransition;
+  framerAnimate?: TAnimate;
+  framerInitial?: TInitial;
 };
 
 const Framer = ({
@@ -42,6 +46,8 @@ const Framer = ({
   /** framer props */
   layout,
   framertransition,
+  framerAnimate,
+  framerInitial,
 }: TFramer) => {
   return (
     <AnimatePresence>
@@ -58,6 +64,8 @@ const Framer = ({
         onClick={onClick}
         layout={layout}
         transition={framertransition}
+        animate={framerAnimate}
+        initial={framerInitial}
       >
         {children}
       </motion.div>

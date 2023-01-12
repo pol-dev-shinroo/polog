@@ -65,3 +65,11 @@ export type TPosition = "relative" | "absolute" | "fixed" | "sticky";
 export type TLayout = boolean;
 
 export type TTransition = object;
+
+export type TAnimate = object;
+
+export type TInitial = object;
+
+/*******************  Types for svg *****************/
+
+export type TFill = string;

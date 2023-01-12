@@ -8,6 +8,7 @@ const Main = () => {
           tagName="p"
           lightClasses={["text-gray-800"]}
           darkClasses={["dark:text-gray-300"]}
+          transitionClasses={["transition-all", "duration-700"]}
           className="text-4xl text-pacifico drop-shadow-2xl"
         >
           Polog

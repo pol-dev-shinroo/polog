@@ -14,6 +14,8 @@ import {
   TPosition,
   TLayout,
   TTransition,
+  TAnimate,
+  TInitial,
 } from "src/models";
 
 interface IStFramerFlex {
@@ -33,9 +35,13 @@ interface IFramerFlexProps {
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
   children?: TChildren;
+  ref?: any;
   /** framer props */
   layout?: TLayout;
   Framertransition?: TTransition;
+  framertransition?: TTransition;
+  framerAnimate?: TAnimate;
+  framerInitial?: TInitial;
 }
 
 const FramerFlex = ({
@@ -49,9 +55,12 @@ const FramerFlex = ({
   transitionClasses,
   positionClasses,
   children,
+  ref,
   /** framer props */
   layout,
-  Framertransition,
+  framertransition,
+  framerAnimate,
+  framerInitial,
 }: IFramerFlexProps) => {
   return (
     <StFramerFlex
@@ -66,7 +75,10 @@ const FramerFlex = ({
         className,
       })}
       layout={layout}
-      transition={Framertransition}
+      transition={framertransition}
+      animate={framerAnimate}
+      initial={framerInitial}
+      ref={ref}
     >
       {children}
     </StFramerFlex>

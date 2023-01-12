@@ -5,11 +5,14 @@ import {
   TrendMonth,
   TrendAll,
   New,
+  Followers,
 } from "src/pages/main";
 
 const Main = () => {
   return (
     <Routes>
+      {/* followers */}
+      <Route path="/" element={<Followers />} />
       {/* trending - 1) all */}
       <Route path="/" element={<TrendAll />} />
       {/* trending - 1) today */}
