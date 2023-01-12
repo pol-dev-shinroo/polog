@@ -8,7 +8,7 @@ const Main = () => {
           tagName="p"
           lightClasses={["text-gray-800"]}
           darkClasses={["dark:text-gray-300"]}
-          className="text-4xl text-pacifico text-indigo-600 text-shadow-md"
+          className="text-4xl text-pacifico drop-shadow-2xl"
         >
           Polog
         </Text>

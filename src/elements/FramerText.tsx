@@ -1,3 +1,4 @@
+import { styled } from "twin.macro";
 import { motion, AnimatePresence } from "framer-motion";
 import { dark, transition, classCombine } from "src/lib";
 import {
@@ -11,10 +12,9 @@ import {
   TTextTag,
   TLayout,
   TTransition,
-  TZindex,
 } from "src/models";
 
-type TFramer = {
+type TFramerText = {
   onClick?: TOnClick;
   tagName?: TBoxTag | TTextTag;
   className?: TClassName;
@@ -22,14 +22,13 @@ type TFramer = {
   darkClasses?: TDarkClasses;
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
-  zIndex?: TZindex;
   children?: TChildren;
   /** framer props */
   layout?: TLayout;
-  framertransition?: TTransition;
+  Framertransition?: TTransition;
 };
 
-const Framer = ({
+const FramerText = ({
   onClick,
   tagName,
   className,
@@ -37,12 +36,11 @@ const Framer = ({
   darkClasses,
   transitionClasses,
   positionClasses,
-  zIndex,
   children,
   /** framer props */
   layout,
-  framertransition,
-}: TFramer) => {
+  Framertransition,
+}: TFramerText) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -53,11 +51,10 @@ const Framer = ({
           dark: dark(lightClasses, darkClasses),
           className,
           position: positionClasses,
-          zIndex: zIndex,
         })}
         onClick={onClick}
         layout={layout}
-        transition={framertransition}
+        transition={Framertransition}
       >
         {children}
       </motion.div>
@@ -65,4 +62,6 @@ const Framer = ({
   );
 };
 
-export default Framer;
+const StFramer = styled(motion.div)``;
+
+export default FramerText;
