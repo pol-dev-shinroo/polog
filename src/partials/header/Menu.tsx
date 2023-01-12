@@ -1,7 +1,6 @@
-import React from "react";
 import { Flex, Box, Text } from "src/elements";
 
-const HeaderMenu = () => {
+const Menu = () => {
   return (
     <Box className="w-1/2 h-full">
       <Flex align="center" justify="center" className="h-full w-full">
@@ -17,4 +16,4 @@ const HeaderMenu = () => {
   );
 };
 
-export default HeaderMenu;
+export default Menu;

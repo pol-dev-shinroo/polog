@@ -1,10 +1,10 @@
+import { TDarkClasses } from "src/models";
+
 interface IDark {
-  lightClasses?: string[];
-  darkClasses?: string[];
-  className?: string;
+  (lightClasses?: TDarkClasses, darkClasses?: TDarkClasses): string;
 }
 
-const dark = ({ lightClasses, darkClasses, className }: IDark) => {
+const dark: IDark = (lightClasses, darkClasses) => {
   let newClasses = "";
   const lightString = lightClasses?.join(" ");
   if (lightString) {
@@ -13,9 +13,6 @@ const dark = ({ lightClasses, darkClasses, className }: IDark) => {
   const darkString = darkClasses?.join(" ");
   if (darkString) {
     newClasses += darkString + " ";
-  }
-  if (className) {
-    newClasses += className + " ";
   }
 
   return newClasses;

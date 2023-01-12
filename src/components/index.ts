@@ -1,5 +1,3 @@
-import HeaderTitle from "./HeaderTitle";
-import HeaderMenu from "./HeaderMenu";
-import HeaderSet from "./HeaderSet";
+import DarkModeToggle from "./DarkModeToggle";
 
-export { HeaderTitle, HeaderMenu, HeaderSet };
+export { DarkModeToggle };

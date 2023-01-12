@@ -1,7 +1,6 @@
-import React from "react";
 import { Flex, Box, Text } from "src/elements";
 
-const HeaderTitle = () => {
+const Main = () => {
   return (
     <Box tagName="header" className="flex-1 w-1/3 h-full">
       <Flex align="center" justify="center" className="h-full w-full">
@@ -18,4 +17,4 @@ const HeaderTitle = () => {
   );
 };
 
-export default HeaderTitle;
+export default Main;

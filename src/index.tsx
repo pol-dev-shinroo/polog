@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "src/styles/styles.css";
 import GlobalStyles from "./styles/GlobalStyles";
 import App from "./App";
 import { RecoilRoot } from "recoil";

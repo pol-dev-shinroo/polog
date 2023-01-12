@@ -1,13 +1,19 @@
-import React from "react";
-import { dark } from "src/lib";
-import { TClassName, TOnClick, TChildren, TDarkClasses } from "src/models";
+import { dark, transition, classCombine } from "src/lib";
+import {
+  TClassName,
+  TOnClick,
+  TChildren,
+  TDarkClasses,
+  TTransitionClass,
+} from "src/models";
 
 interface IBtn {
   onClick?: TOnClick;
   className?: TClassName;
-  children?: TChildren;
   lightClasses?: TDarkClasses;
   darkClasses?: TDarkClasses;
+  transitionClasses?: TTransitionClass;
+  children?: TChildren;
 }
 
 const Btn = ({
@@ -16,11 +22,16 @@ const Btn = ({
   children,
   lightClasses,
   darkClasses,
+  transitionClasses,
 }: IBtn) => {
   return (
     <button
       onClick={onClick}
-      className={dark({ lightClasses, darkClasses, className })}
+      className={classCombine({
+        transition: transition(transitionClasses),
+        dark: dark(lightClasses, darkClasses),
+        className,
+      })}
     >
       {children}
     </button>

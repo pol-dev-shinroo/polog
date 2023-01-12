@@ -3,5 +3,6 @@ import Dark from "./Dark";
 import Text from "./Text";
 import Box from "./Box";
 import Btn from "./Btn";
+import ToggleBtn from "./ToggleBtn";
 
-export { Flex, Dark, Text, Box, Btn };
+export { Flex, Dark, Text, Box, Btn, ToggleBtn };

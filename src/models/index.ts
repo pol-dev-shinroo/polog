@@ -34,6 +34,10 @@ export type TDarkClasses = string[];
 
 export type TDarkProp = boolean | undefined;
 
+/*******************  Types for transitionClass *******************/
+
+export type TTransitionClass = string[] | undefined;
+
 /*******************  Types for tagNames **********************/
 
 export type TBoxTag = "div" | "header";
@@ -47,3 +51,5 @@ export type TOnClick = () => void;
 /*******************  Types for children **********************/
 
 export type TChildren = React.ReactNode;
+
+/*******************  Types for children **********************/

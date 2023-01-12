@@ -1,4 +1,3 @@
-import React from "react";
 import { styled } from "twin.macro";
 import {
   Align,
@@ -7,10 +6,13 @@ import {
   TClassName,
   TDarkClasses,
   TChildren,
+  TOnClick,
+  TTransitionClass,
 } from "src/models";
-import { flex, dark } from "src/lib/";
+import { flex, dark, transition, classCombine } from "src/lib/";
 
-interface GridProps {
+interface FlexProps {
+  onClick?: TOnClick;
   align?: Align;
   justify?: Justify;
   direction?: Direction;
@@ -18,6 +20,7 @@ interface GridProps {
   children?: TChildren;
   lightClasses?: TDarkClasses;
   darkClasses?: TDarkClasses;
+  transitionClasses?: TTransitionClass;
 }
 interface ContainerProps {
   align?: Align;
@@ -26,6 +29,7 @@ interface ContainerProps {
 }
 
 const Flex = ({
+  onClick,
   align,
   justify,
   direction,
@@ -33,13 +37,19 @@ const Flex = ({
   children,
   lightClasses,
   darkClasses,
-}: GridProps) => {
+  transitionClasses,
+}: FlexProps) => {
   return (
     <Container
       align={align}
       justify={justify}
       direction={direction}
-      className={dark({ lightClasses, darkClasses, className })}
+      className={classCombine({
+        transition: transition(transitionClasses),
+        dark: dark(lightClasses, darkClasses),
+        className,
+      })}
+      onClick={onClick}
     >
       {children}
     </Container>

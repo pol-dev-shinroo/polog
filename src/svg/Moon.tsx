@@ -1,14 +1,19 @@
-import React from "react";
+import { TClassName, TOnClick } from "src/models";
 
-const Moon = () => {
+interface IMoon {
+  onClick?: TOnClick;
+  className?: TClassName;
+}
+
+const Moon = ({ onClick, className }: IMoon) => {
   return (
     <svg
+      onClick={onClick}
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="#f8db84"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-6 h-6"
+      className={className}
     >
       <path
         strokeLinecap="round"

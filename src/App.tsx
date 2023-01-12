@@ -9,7 +9,11 @@ function App() {
   return (
     <Dark dark={isDark}>
       {/* Full Screen */}
-      <Flex className="h-screen w-screen bg-indigo-50 dark:bg-zinc-900">
+      <Flex
+        lightClasses={["g-indigo-50"]}
+        darkClasses={["dark:bg-zinc-900"]}
+        className="h-screen w-screen transition-all duration-700"
+      >
         <Header />
       </Flex>
     </Dark>

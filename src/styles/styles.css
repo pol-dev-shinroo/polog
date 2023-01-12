@@ -7,3 +7,6 @@
 .text-pacifico {
   font-family: "Pacifico", cursive;
 }
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}

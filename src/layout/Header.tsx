@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "src/elements";
-import { HeaderTitle, HeaderMenu, HeaderSet } from "src/components";
+import { Menu, Main, Settings } from "src/partials/header";
 
 const Header = () => {
   return (
@@ -11,9 +11,9 @@ const Header = () => {
       darkClasses={["dark:bg-zinc-700"]}
       className="h-12 w-full p-1 flex-wrap shadow shadow-gray-500"
     >
-      <HeaderTitle />
-      <HeaderMenu />
-      <HeaderSet />
+      <Main />
+      <Menu />
+      <Settings />
     </Flex>
   );
 };
