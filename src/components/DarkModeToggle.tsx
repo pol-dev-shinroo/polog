@@ -6,19 +6,6 @@ import { useDark } from "src/hooks";
 const DarkModeToggle = () => {
   const { isDark, toggleDark } = useDark();
   return (
-    // <Flex
-    //   align="center"
-    //   justify="start"
-    //   lightClasses={["bg-orange-200"]}
-    //   darkClasses={["dark:bg-slate-200"]}
-    //   transitionClasses={["transition-all", "duration-700"]}
-    //   positionClasses="relative"
-    //   className="switch w-16 h-7 rounded-3xl cursor-pointer overflow-hidden"
-    //   onClick={toggleDark}
-    //   data-isOn={isDark}
-    // >
-    //   <StHandle layout transition={spring} />
-    // </Flex>
     <FramerFlex
       align="center"
       justify="start"
