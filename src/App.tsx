@@ -12,7 +12,8 @@ function App() {
       <Flex
         lightClasses={["g-indigo-50"]}
         darkClasses={["dark:bg-zinc-900"]}
-        className="h-screen w-screen transition-all duration-700"
+        transitionClasses={["transition-colors", "duration-700"]}
+        className="h-screen w-screen"
       >
         <Header />
       </Flex>

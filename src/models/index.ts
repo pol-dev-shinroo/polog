@@ -52,4 +52,12 @@ export type TOnClick = () => void;
 
 export type TChildren = React.ReactNode;
 
-/*******************  Types for children **********************/
+/*******************  Types for position **********************/
+
+export type TPosition = "relative" | "absolute" | "fixed" | "sticky";
+
+/*******************  Types for framer-motion **********************/
+
+export type TLayout = boolean;
+
+export type TTransition = object;

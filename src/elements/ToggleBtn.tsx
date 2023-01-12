@@ -8,12 +8,16 @@ const ToggleBtn = () => {
   const { isDark, toggleDark } = useDark();
   return (
     <StSwitchContainer
-      className="switch"
+      className="switch bg-yellow-200 dark:bg-slate-500 shadow shadow-gray-500"
       data-isOn={isDark}
       onClick={toggleDark}
     >
-      <StHandle layout transition={spring} />
-      <StIconsContainer className="absolute top-0 left-0 z-index:-1">
+      <StHandle
+        layout
+        transition={spring}
+        className="dark:bg-slate-300 bg-slate-300 shadow shadow-gray-500"
+      />
+      <StIconsContainer className="absolute top-0 left-0 z-index:-1  ">
         <Moon className="w-6 h-6" />
       </StIconsContainer>
       <StIconsContainer className="absolute top-0 right-0 z-index:-1">
@@ -32,7 +36,7 @@ const spring = {
 const StSwitchContainer = styled(motion.div)`
   width: 70px;
   height: 30px;
-  background-color: rgba(255, 255, 255, 0.4);
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -45,7 +49,6 @@ const StSwitchContainer = styled(motion.div)`
 const StHandle = styled(motion.div)`
   width: 35px;
   height: 30px;
-  background-color: white;
   border-radius: 40px;
   position: relative;
   z-index: 1;

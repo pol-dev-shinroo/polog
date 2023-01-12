@@ -1,18 +1,28 @@
 import { styled } from "twin.macro";
+import { motion } from "framer-motion";
+import { flexFramer, dark, transition, classCombine } from "src/lib";
+
 import {
   Align,
   Justify,
   Direction,
+  TOnClick,
+  TChildren,
   TClassName,
   TDarkClasses,
-  TChildren,
-  TOnClick,
   TTransitionClass,
   TPosition,
+  TLayout,
+  TTransition,
 } from "src/models";
-import { flex, dark, transition, classCombine } from "src/lib";
 
-interface FlexProps {
+interface IStFramerFlex {
+  align?: Align;
+  justify?: Justify;
+  direction?: Direction;
+}
+
+interface IFramerFlexProps {
   onClick?: TOnClick;
   align?: Align;
   justify?: Justify;
@@ -23,14 +33,12 @@ interface FlexProps {
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
   children?: TChildren;
-}
-interface ContainerProps {
-  align?: Align;
-  justify?: Justify;
-  direction?: Direction;
+  /** framer props */
+  layout?: TLayout;
+  Framertransition?: TTransition;
 }
 
-const Flex = ({
+const FramerFlex = ({
   onClick,
   align,
   justify,
@@ -41,29 +49,37 @@ const Flex = ({
   transitionClasses,
   positionClasses,
   children,
-}: FlexProps) => {
+  /** framer props */
+  layout,
+  Framertransition,
+}: IFramerFlexProps) => {
   return (
-    <Container
+    <StFramerFlex
       align={align}
       justify={justify}
       direction={direction}
+      onClick={onClick}
       className={classCombine({
         transition: transition(transitionClasses),
         dark: dark(lightClasses, darkClasses),
         position: positionClasses,
         className,
       })}
-      onClick={onClick}
+      layout={layout}
+      transition={Framertransition}
     >
       {children}
-    </Container>
+    </StFramerFlex>
   );
 };
 
-const Container = styled.div(
-  ({ align, justify, direction }: ContainerProps) => [
-    ...flex({ align, justify, direction }),
-  ]
-);
+const StFramerFlex = styled(motion.div)`
+  ${({ align, justify, direction }: IStFramerFlex) =>
+    flexFramer({
+      align,
+      justify,
+      direction,
+    })}
+`;
 
-export default Flex;
+export default FramerFlex;
