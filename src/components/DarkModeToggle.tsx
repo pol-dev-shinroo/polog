@@ -12,7 +12,9 @@ const DarkModeToggle = () => {
       darkClasses={["dark:bg-slate-500"]}
       transitionClasses={["transition-all", "duration-700"]}
       positionClasses="relative"
-      className="switch w-16 h-7 rounded-3xl cursor-pointer overflow-hidden shadow-md shadow-gray-500"
+      className={`switch w-16 h-7 rounded-3xl cursor-pointer overflow-hidden ${
+        !isDark && "shadow-md shadow-gray-500"
+      } `}
       onClick={toggleDark}
     >
       {/* The Handle */}

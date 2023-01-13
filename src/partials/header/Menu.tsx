@@ -4,7 +4,7 @@ import { useDark, useIndex } from "src/hooks";
 
 const Menu = () => {
   const { isDark } = useDark();
-  const { activeIndex, handleActiveIndex } = useIndex(1);
+  const { activeIndex, handleActiveIndex } = useIndex();
   return (
     <Box className="w-1/2 h-full">
       <Flex

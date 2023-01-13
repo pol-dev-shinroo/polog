@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { menuAtom } from "src/atoms/menu";
 import { TIndex } from "src/models";
 
-const useIndex = (defaultIndex: TIndex) => {
-  const [activeIndex, setActiveIndex] = useState<TIndex>(defaultIndex);
+const useIndex = () => {
+  const [activeIndex, setActiveIndex] = useRecoilState<TIndex>(menuAtom);
 
   const handleActiveIndex = (target: TIndex) => {
     setActiveIndex(target);
