@@ -70,6 +70,10 @@ export type TAnimate = object;
 
 export type TInitial = object;
 
+export type TWhileHover = object;
+
+export type TWhileTap = object;
+
 /*******************  Types for svg *****************/
 
 export type TFill = string;

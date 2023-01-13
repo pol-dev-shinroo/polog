@@ -5,5 +5,17 @@ import Box from "./Box";
 import Btn from "./Btn";
 import FramerFlex from "./FramerFlex";
 import Framer from "./Framer";
+import FramerText from "./FramerText";
+import FramerBtn from "./FramerBtn";
 
-export { Flex, Dark, Text, Box, Btn, FramerFlex, Framer };
+export {
+  Flex,
+  Dark,
+  Text,
+  Box,
+  Btn,
+  FramerFlex,
+  Framer,
+  FramerText,
+  FramerBtn,
+};
