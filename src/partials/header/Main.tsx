@@ -9,7 +9,7 @@ const Main = () => {
           lightClasses={["text-gray-800"]}
           darkClasses={["dark:text-gray-300"]}
           transitionClasses={["transition-all", "duration-700"]}
-          className="text-4xl text-pacifico drop-shadow-2xl"
+          className="text-5xl text-pacifico shadow-none shadow-gray-500 hover:shadow-md border border-red-600 cursor-pointer"
         >
           Polog
         </Text>

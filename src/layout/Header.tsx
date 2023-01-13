@@ -10,7 +10,7 @@ const Header = () => {
       lightClasses={["bg-neutral-50"]}
       darkClasses={["dark:bg-zinc-700"]}
       positionClasses="sticky"
-      className="h-12 w-full p-1 flex-wrap shadow shadow-gray-500"
+      className="h-16 w-full flex-wrap shadow shadow-gray-500"
     >
       <Main />
       <Menu />

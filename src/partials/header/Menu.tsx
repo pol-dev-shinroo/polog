@@ -1,80 +1,97 @@
-import { useState } from "react";
 import { Flex, Box, FramerFlex, Framer } from "src/elements";
 import { Community, Fire, Time } from "src/svg";
-import { useDark } from "src/hooks";
+import { useDark, useIndex } from "src/hooks";
 
 const Menu = () => {
   const { isDark } = useDark();
-  const [activeIcon, setActiveIcon] = useState("icon1");
+  const { activeIndex, handleActiveIndex } = useIndex(1);
   return (
     <Box className="w-1/2 h-full">
-      <Flex align="center" justify="center" className="h-full w-full">
+      <Flex
+        align="center"
+        justify="center"
+        direction="col"
+        className="h-full w-full pt-3"
+      >
         <Flex
           align="center"
           justify="between"
           positionClasses="relative"
-          className="h-full w-1/4"
+          className="w-3/5"
         >
           <FramerFlex
             align="center"
             justify="center"
-            className="w-7 h-7 cursor-pointer"
+            className="w-1/3 h-8 cursor-pointer"
           >
             <Community
-              onClick={() => setActiveIcon("icon1")}
+              onClick={() => handleActiveIndex(0)}
               isDark={isDark}
-              lightFill="none"
-              darkFill="#f5f6f8"
+              lightFill={`${activeIndex !== 0 ? "" : "#22d3ee"}`}
+              darkFill={`${activeIndex !== 0 ? "#f1f5f9" : "#22d3ee"}`}
               transitionClasses={["transition-all", "duration-700"]}
-              className="w-10 h-8 shadow-md shadow-gray-500 rounded-lg text-gray-200"
+              className={`w-full h-8 rounded-lg text-neutral-50 ${
+                isDark && activeIndex !== 0 && "shadow-lg shadow-gray-500"
+              }`}
             />
           </FramerFlex>
           <FramerFlex
             align="center"
             justify="center"
-            className="w-7 h-7 cursor-pointer"
+            className="w-1/3 h-8 cursor-pointer"
           >
             <Fire
-              onClick={() => setActiveIcon("icon2")}
+              onClick={() => handleActiveIndex(1)}
               isDark={isDark}
-              lightFill="#f97316"
-              darkFill="#facc15"
+              lightFill={`${activeIndex !== 1 ? "" : "#f97316"}`}
+              darkFill={`${activeIndex !== 1 ? "#f1f5f9" : "#facc15"}`}
               transitionClasses={["transition-all", "duration-700"]}
-              className="w-10 h-8 shadow-md shadow-gray-500 "
+              className={`w-full h-8 rounded-lg text-neutral-50 ${
+                isDark && activeIndex !== 1 && "shadow-lg shadow-gray-500"
+              }`}
             />
           </FramerFlex>
           <FramerFlex
             align="center"
             justify="center"
-            className="w-7 h-7 cursor-pointer"
+            className="w-1/3 h-8 cursor-pointer"
           >
             <Time
-              onClick={() => setActiveIcon("icon3")}
+              onClick={() => handleActiveIndex(2)}
               isDark={isDark}
-              lightFill="none"
-              darkFill="none"
+              lightFill={`${activeIndex !== 2 ? "" : "#e879f9"}`}
+              darkFill={`${activeIndex !== 2 ? "#3f3f46" : "#e879f9"}`}
               transitionClasses={["transition-all", "duration-700"]}
-              className="w-10 h-8 shadow-md shadow-gray-500 text-gray-200"
+              className={`w-full h-8 rounded-lg text-neutral-50 ${
+                isDark && activeIndex !== 2 && "shadow-lg shadow-gray-500"
+              }`}
             />
           </FramerFlex>
-          <Framer
-            positionClasses="absolute"
-            framerInitial={{ left: 0 }}
-            framerAnimate={{
-              left:
-                activeIcon === "icon1" ? 0 : activeIcon === "icon2" ? 30 : 60,
-            }}
-            framertransition={{
-              type: "tween",
-              duration: 0.5,
-              ease: "easeOut",
-            }}
-            className="bottom-0 bg-white w-7 h-0.5"
-          />
         </Flex>
+        <FramerFlex
+          align="center"
+          justify={
+            activeIndex === 0 ? "start" : activeIndex === 1 ? "center" : "end"
+          }
+          className=" w-3/5 py-0.5"
+        >
+          <Framer
+            layout={true}
+            framertransition={spring}
+            lightClasses={["bg-slate-600"]}
+            darkClasses={["dark:bg-slate-300"]}
+            className="w-1/3 h-0.5"
+          ></Framer>
+        </FramerFlex>
       </Flex>
     </Box>
   );
+};
+
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30,
 };
 
 export default Menu;

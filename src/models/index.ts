@@ -73,3 +73,7 @@ export type TInitial = object;
 /*******************  Types for svg *****************/
 
 export type TFill = string;
+
+/*******************  Types for index *****************/
+
+export type TIndex = number;

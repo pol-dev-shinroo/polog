@@ -1,3 +1,4 @@
 import useDark from "./useDark";
+import useIndex from "./useIndex";
 
-export { useDark };
+export { useDark, useIndex };
