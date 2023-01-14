@@ -1,4 +1,4 @@
-import { TClassName, TPosition, TZindex } from "src/models";
+import { TClassName, TPosition, TZindex, TGrid } from "src/models";
 
 interface IClassComb {
   transition?: string;
@@ -6,6 +6,7 @@ interface IClassComb {
   className?: TClassName;
   position?: TPosition;
   zIndex?: TZindex;
+  grid?: TGrid;
 }
 
 const classCombine = ({
@@ -14,6 +15,7 @@ const classCombine = ({
   className,
   position,
   zIndex,
+  grid,
 }: IClassComb) => {
   let newClasses = "";
   if (transition) {
@@ -27,6 +29,9 @@ const classCombine = ({
   }
   if (zIndex) {
     newClasses += zIndex + " ";
+  }
+  if (grid) {
+    newClasses += grid + " ";
   }
   if (className) {
     newClasses += className + " ";

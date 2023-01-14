@@ -83,3 +83,7 @@ export type TFill = string;
 /*******************  Types for index *****************/
 
 export type TIndex = number;
+
+/*******************  Types for grid *****************/
+
+export type TGrid = string;
