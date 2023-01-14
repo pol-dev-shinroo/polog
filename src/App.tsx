@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-import { Dark, Box } from "src/elements";
+import { Dark, Box, Flex } from "src/elements";
 import { useDark } from "src/hooks";
-import { Header } from "src/layout";
+import { Header, RightMenu, Posts, LeftMenu } from "src/layout";
 
 function App() {
   const { isDark } = useDark();
@@ -9,37 +9,22 @@ function App() {
     <Dark dark={isDark}>
       {/* Full Screen */}
       <Box
-        lightClasses={["g-indigo-50"]}
+        lightClasses={["bg-gray-100"]}
         darkClasses={["dark:bg-zinc-900"]}
         transitionClasses={["transition-colors", "duration-700"]}
-        className="h-full w-screen"
+        className="h-full w-full"
       >
         <Header />
         <BrowserRouter>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
-          <h1>Hello world</h1>
+          <Flex
+            justify="between"
+            direction="row"
+            className="w-full pt-11 px-24"
+          >
+            <LeftMenu />
+            <Posts />
+            <RightMenu />
+          </Flex>
         </BrowserRouter>
       </Box>
     </Dark>

@@ -1,4 +1,6 @@
 import { styled } from "twin.macro";
+import { motion } from "framer-motion";
+
 import {
   TClassName,
   TDarkClasses,
@@ -8,6 +10,11 @@ import {
   TPosition,
   TZindex,
   TGrid,
+  TLayout,
+  TTransition,
+  TAnimate,
+  TInitial,
+  TExit,
 } from "src/models";
 import { dark, transition, classCombine, grid } from "src/lib";
 
@@ -23,6 +30,13 @@ interface IGridProps {
   md?: TGrid;
   sm?: TGrid;
   children?: TChildren;
+  /** framer props */
+  layout?: TLayout;
+  Framertransition?: TTransition;
+  framertransition?: TTransition;
+  framerAnimate?: TAnimate;
+  framerInitial?: TInitial;
+  framerExit?: TExit;
 }
 
 const Grid = ({
@@ -37,6 +51,12 @@ const Grid = ({
   md,
   sm,
   children,
+  /** framer props */
+  layout,
+  framertransition,
+  framerAnimate,
+  framerInitial,
+  framerExit,
 }: IGridProps) => {
   return (
     <StGrid
@@ -49,12 +69,17 @@ const Grid = ({
         grid: grid(lg, md, sm),
       })}
       onClick={onClick}
+      layout={layout}
+      transition={framertransition}
+      animate={framerAnimate}
+      initial={framerInitial}
+      exit={framerExit}
     >
       {children}
     </StGrid>
   );
 };
 
-const StGrid = styled.div``;
+const StGrid = styled(motion.div)``;
 
 export default Grid;

@@ -68,14 +68,6 @@ const FramerFlex = ({
   framerInitial,
   framerExit,
 }: IFramerFlexProps) => {
-  console.log(framerInitial);
-  // {y: -50, position: 'absolute', top: '60px'}
-  console.log(framerAnimate);
-  // {y: 0}
-  console.log(framertransition);
-  // {type: 'spring', stiffness: 300, damping: 30}
-  console.log(framerExit);
-  // {y: -50}
   return (
     <StFramerFlex
       align={align}

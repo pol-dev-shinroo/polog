@@ -15,8 +15,8 @@ const SubHeader = () => {
           framerInitial={{ y: -50, position: "absolute", top: "60px" }}
           framerAnimate={{ y: 0 }}
           framerExit={{ y: -50 }}
-          framertransition={{ type: "spring", stiffness: 300, damping: 30 }}
-          zIndex="z-10"
+          framertransition={{ type: "spring", stiffness: 300, damping: 18 }}
+          zIndex="z-20"
           lightClasses={["bg-blue-100", "bg-opacity-70"]}
           darkClasses={["dark:bg-zinc-700", "dark:bg-opacity-70"]}
           className="w-full shadow shadow-gray-500"
