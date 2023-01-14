@@ -12,10 +12,33 @@ function App() {
         lightClasses={["g-indigo-50"]}
         darkClasses={["dark:bg-zinc-900"]}
         transitionClasses={["transition-colors", "duration-700"]}
-        className="h-screen w-screen"
+        className="h-full w-screen"
       >
         <Header />
         <BrowserRouter>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
+          <h1>Hello world</h1>
           <h1>Hello world</h1>
         </BrowserRouter>
       </Box>

@@ -1,3 +1,4 @@
 import Header from "./Header";
+import Posts from "./Posts";
 
-export { Header };
+export { Header, Posts };

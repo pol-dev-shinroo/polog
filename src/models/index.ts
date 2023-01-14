@@ -58,7 +58,7 @@ export type TChildren = React.ReactNode;
 
 /*******************  Types for position *********************/
 
-export type TPosition = "relative" | "absolute" | "fixed" | "sticky";
+export type TPosition = "relative" | "absolute" | "fixed" | "sticky" | string;
 
 /*******************  Types for framer-motion *****************/
 
