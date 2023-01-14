@@ -9,7 +9,7 @@ function App() {
     <Dark dark={isDark}>
       {/* Full Screen */}
       <Box
-        lightClasses={["bg-gray-100"]}
+        lightClasses={["bg-gray-200"]}
         darkClasses={["dark:bg-zinc-900"]}
         transitionClasses={["transition-colors", "duration-700"]}
         className="h-full w-full"

@@ -14,6 +14,7 @@ import {
   TZindex,
   TAnimate,
   TInitial,
+  TWhileHover,
 } from "src/models";
 
 type TFramer = {
@@ -31,6 +32,7 @@ type TFramer = {
   framertransition?: TTransition;
   framerAnimate?: TAnimate;
   framerInitial?: TInitial;
+  whileHover?: TWhileHover;
 };
 
 const Framer = ({
@@ -48,6 +50,7 @@ const Framer = ({
   framertransition,
   framerAnimate,
   framerInitial,
+  whileHover,
 }: TFramer) => {
   return (
     <AnimatePresence>
@@ -66,6 +69,7 @@ const Framer = ({
         transition={framertransition}
         animate={framerAnimate}
         initial={framerInitial}
+        whileHover={whileHover}
       >
         {children}
       </motion.div>

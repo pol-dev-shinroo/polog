@@ -27,30 +27,30 @@ const Posts = () => {
         // sm="sm:grid-cols-1"
         // md="md:grid-cols-2"
         // lg="lg:grid-cols-3"
-        className="p-3 px-3 columns grid grid-cols-3 grid-row-gap-0 gap-5"
+        className="p-3 px-3 pt-10 columns grid grid-cols-3 grid-row-gap-0 gap-5"
       >
         <Framer
-          lightClasses={["bg-teal-50", "bg-opacity-70"]}
+          whileHover={hover}
+          lightClasses={["bg-slate-50", "bg-opacity-70"]}
           darkClasses={["dark:bg-zinc-700", "dark:bg-opacity-70"]}
-          className="rounded-lg w-96 h-96  shadow-md shadow-gray-500"
+          className="rounded-lg w-80 h-96 hover:shadow-md hover:shadow-gray-500"
         >
           <FramerFlex justify="center" direction="col" className="h-full">
+            <FramerFlex className="w-full h-3/6">
+              <img
+                className="w-full h-full object-fit"
+                src="https://media4.giphy.com/media/YWf50NNii3r4k/giphy.gif"
+                alt="Gif"
+              />
+            </FramerFlex>
             <FramerFlex className="w-full h-2/6"></FramerFlex>
-            <FramerFlex className="w-full h-2/6 border-t-2 border-red-600"></FramerFlex>
-            <FramerFlex className="w-full h-1/6 border-t-2 border-red-600"></FramerFlex>
-            <FramerFlex
-              align="center"
-              direction="row"
-              className="w-full h-1/6 border border-green-600"
-            >
-              <Flex
-                align="center"
-                className="w-4/5 h-full pl-5 border border-red-600"
-              >
+            <FramerFlex className="w-full h-1/6 border-t-2 "></FramerFlex>
+            <FramerFlex align="center" direction="row" className="w-full h-1/6">
+              <Flex align="center" className="w-4/5 h-full pl-5">
                 <FramerBtn whileHover={hover} whileTap={tap} onClick={() => {}}>
-                  <Box className=" w-10 h-10 rounded-full border mr-3"></Box>
+                  <Box className=" w-10 h-10 rounded-full mr-3 border"></Box>
                 </FramerBtn>
-                <Text tagName="p" className="mr-2 border border-red-600">
+                <Text tagName="p" className="mr-2">
                   by
                 </Text>
                 <FramerBtn
@@ -62,11 +62,7 @@ const Posts = () => {
                   Jaeyoung
                 </FramerBtn>
               </Flex>
-              <Flex
-                align="center"
-                justify="center"
-                className="w-1/5 h-full border border-red-600"
-              >
+              <Flex align="center" justify="center" className="w-1/5 h-full">
                 <FramerBtn whileHover={hover} whileTap={tap} onClick={() => {}}>
                   <Heart className="h-3 mr-1" />
                 </FramerBtn>
@@ -81,7 +77,8 @@ const Posts = () => {
 };
 
 const hover = {
-  scale: 1.1,
+  translateY: -5,
+  transition: { duration: 0.8 },
 };
 
 const tap = {
