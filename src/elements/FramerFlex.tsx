@@ -12,10 +12,12 @@ import {
   TDarkClasses,
   TTransitionClass,
   TPosition,
+  TZindex,
   TLayout,
   TTransition,
   TAnimate,
   TInitial,
+  TExit,
 } from "src/models";
 
 interface IStFramerFlex {
@@ -34,6 +36,7 @@ interface IFramerFlexProps {
   darkClasses?: TDarkClasses;
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
+  zIndex?: TZindex;
   children?: TChildren;
   ref?: any;
   /** framer props */
@@ -42,6 +45,7 @@ interface IFramerFlexProps {
   framertransition?: TTransition;
   framerAnimate?: TAnimate;
   framerInitial?: TInitial;
+  framerExit?: TExit;
 }
 
 const FramerFlex = ({
@@ -54,6 +58,7 @@ const FramerFlex = ({
   darkClasses,
   transitionClasses,
   positionClasses,
+  zIndex,
   children,
   ref,
   /** framer props */
@@ -61,7 +66,16 @@ const FramerFlex = ({
   framertransition,
   framerAnimate,
   framerInitial,
+  framerExit,
 }: IFramerFlexProps) => {
+  console.log(framerInitial);
+  // {y: -50, position: 'absolute', top: '60px'}
+  console.log(framerAnimate);
+  // {y: 0}
+  console.log(framertransition);
+  // {type: 'spring', stiffness: 300, damping: 30}
+  console.log(framerExit);
+  // {y: -50}
   return (
     <StFramerFlex
       align={align}
@@ -71,13 +85,15 @@ const FramerFlex = ({
       className={classCombine({
         transition: transition(transitionClasses),
         dark: dark(lightClasses, darkClasses),
-        position: positionClasses,
         className,
+        position: positionClasses,
+        zIndex: zIndex,
       })}
       layout={layout}
       transition={framertransition}
       animate={framerAnimate}
       initial={framerInitial}
+      exit={framerExit}
       ref={ref}
     >
       {children}

@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { FramerFlex, Framer } from "src/elements";
 import { useIndex } from "src/hooks";
 
@@ -11,13 +12,15 @@ const HeaderMenuUnderLine = () => {
       }
       className=" w-3/5 py-0.5"
     >
-      <Framer
-        layout={true}
-        framertransition={spring}
-        lightClasses={["bg-slate-600"]}
-        darkClasses={["dark:bg-slate-300"]}
-        className="w-1/3 h-0.5"
-      ></Framer>
+      <AnimatePresence>
+        <Framer
+          layout={true}
+          framertransition={spring}
+          lightClasses={["bg-slate-600"]}
+          darkClasses={["dark:bg-slate-300"]}
+          className="w-1/3 h-0.5"
+        ></Framer>
+      </AnimatePresence>
     </FramerFlex>
   );
 };

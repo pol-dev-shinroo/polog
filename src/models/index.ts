@@ -74,6 +74,8 @@ export type TWhileHover = object;
 
 export type TWhileTap = object;
 
+export type TExit = object;
+
 /*******************  Types for svg *****************/
 
 export type TFill = string;

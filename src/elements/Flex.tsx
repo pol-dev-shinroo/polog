@@ -9,6 +9,7 @@ import {
   TOnClick,
   TTransitionClass,
   TPosition,
+  TZindex,
 } from "src/models";
 import { flex, dark, transition, classCombine } from "src/lib";
 
@@ -22,6 +23,7 @@ interface FlexProps {
   darkClasses?: TDarkClasses;
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
+  zIndex?: TZindex;
   children?: TChildren;
 }
 interface ContainerProps {
@@ -40,6 +42,7 @@ const Flex = ({
   darkClasses,
   transitionClasses,
   positionClasses,
+  zIndex,
   children,
 }: FlexProps) => {
   return (
@@ -50,8 +53,9 @@ const Flex = ({
       className={classCombine({
         transition: transition(transitionClasses),
         dark: dark(lightClasses, darkClasses),
-        position: positionClasses,
         className,
+        position: positionClasses,
+        zIndex: zIndex,
       })}
       onClick={onClick}
     >
