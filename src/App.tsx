@@ -19,7 +19,7 @@ function App() {
           <Flex
             justify="between"
             direction="row"
-            className="w-full pt-11 px-24 border-4 border-green-500"
+            className="w-full pt-11 px-24"
           >
             <LeftMenu />
             <Posts />
