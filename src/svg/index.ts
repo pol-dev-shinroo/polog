@@ -6,5 +6,6 @@ import Fire from "./Fire";
 import Alarm from "./Alarm";
 import Time from "./Time";
 import Heart from "./Heart";
+import Comments from "./Comments";
 
-export { Sun, Moon, Computer, Community, Fire, Alarm, Time, Heart };
+export { Sun, Moon, Computer, Community, Fire, Alarm, Time, Heart, Comments };

@@ -1,6 +1,6 @@
 import { useIndex, useSubIndex, useDark } from "src/hooks";
 import { FramerFlex, Flex, FramerBtn, Framer, Box, Text } from "src/elements";
-import { Heart } from "src/svg";
+import { Heart, Comments } from "src/svg";
 
 const Post = () => {
   const { isDark } = useDark();
@@ -103,7 +103,11 @@ const Post = () => {
                   onClick={() => {}}
                   className="mr-1"
                 >
-                  <Heart isDark={isDark} darkFill="#f1f5f9" className="h-3" />
+                  <Comments
+                    isDark={isDark}
+                    darkFill="#f1f5f9"
+                    className="h-3"
+                  />
                 </FramerBtn>
                 <Text
                   tagName="p"
