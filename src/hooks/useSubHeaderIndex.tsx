@@ -1,16 +1,16 @@
 import { useRecoilState } from "recoil";
 import { subMenuAtom } from "src/atoms/menu";
-import { TIndex } from "src/models";
+import { TSubHeaderIndex } from "src/models";
 
-const useSubIndex = () => {
+const useSubHeaderIndex = () => {
   const [subActiveIndex, setSubActiveIndex] =
-    useRecoilState<TIndex>(subMenuAtom);
+    useRecoilState<TSubHeaderIndex>(subMenuAtom);
 
-  const handleSubActiveIndex = (target: TIndex) => {
+  const handleSubActiveIndex = (target: TSubHeaderIndex) => {
     setSubActiveIndex(target);
   };
 
   return { subActiveIndex, handleSubActiveIndex };
 };
 
-export default useSubIndex;
+export default useSubHeaderIndex;

@@ -80,9 +80,10 @@ export type TExit = object;
 
 export type TFill = string;
 
-/*******************  Types for index *****************/
+/*******************  Types for Header + SubHeader index *****************/
 
-export type TIndex = number;
+export type THeaderIndex = 0 | 1 | 2;
+export type TSubHeaderIndex = 0 | 1 | 2;
 
 /*******************  Types for grid *****************/
 

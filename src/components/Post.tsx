@@ -1,11 +1,9 @@
-import { useIndex, useSubIndex, useDark } from "src/hooks";
+import { useDark } from "src/hooks";
 import { FramerFlex, Flex, FramerBtn, Framer, Box, Text } from "src/elements";
 import { Heart, Comments } from "src/svg";
 
 const Post = () => {
   const { isDark } = useDark();
-  const { activeIndex } = useIndex();
-  const { subActiveIndex, handleSubActiveIndex } = useSubIndex();
   return (
     <Framer
       whileHover={hover}

@@ -1,10 +1,10 @@
 import { AnimatePresence } from "framer-motion";
 import { FramerFlex, Flex, FramerBtn } from "src/elements";
-import { useIndex, useSubIndex } from "src/hooks";
+import { useMenuIndex, useSubHeaderIndex } from "src/hooks";
 
 const SubHeader = () => {
-  const { activeIndex } = useIndex();
-  const { subActiveIndex, handleSubActiveIndex } = useSubIndex();
+  const { activeIndex } = useMenuIndex();
+  const { subActiveIndex, handleSubActiveIndex } = useSubHeaderIndex();
 
   return (
     <AnimatePresence>

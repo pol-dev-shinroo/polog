@@ -1,5 +1,5 @@
 import useDark from "./useDark";
-import useIndex from "./useIndex";
-import useSubIndex from "./useSubIndex";
+import useMenuIndex from "./useIndex";
+import useSubHeaderIndex from "./useSubIndex";
 
-export { useDark, useIndex, useSubIndex };
+export { useDark, useMenuIndex, useSubHeaderIndex };

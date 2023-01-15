@@ -1,10 +1,10 @@
 import { Flex, FramerFlex, FramerBtn } from "src/elements";
 import { Community, Fire, Time } from "src/svg";
-import { useDark, useIndex } from "src/hooks";
+import { useDark, useMenuIndex } from "src/hooks";
 
 const HeaderMenuList = () => {
   const { isDark } = useDark();
-  const { activeIndex, handleActiveIndex } = useIndex();
+  const { activeIndex, handleActiveIndex } = useMenuIndex();
   return (
     <Flex
       align="center"

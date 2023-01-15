@@ -1,9 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 import { FramerFlex, Framer } from "src/elements";
-import { useIndex } from "src/hooks";
+import { useMenuIndex } from "src/hooks";
 
 const HeaderMenuUnderLine = () => {
-  const { activeIndex } = useIndex();
+  const { activeIndex } = useMenuIndex();
   return (
     <FramerFlex
       align="center"
