@@ -98,4 +98,5 @@ export type TPost = {
   dateWritten: number;
   likeCnt: number;
   commentCnt: number;
+  img: string;
 };

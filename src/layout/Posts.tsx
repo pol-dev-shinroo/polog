@@ -16,7 +16,7 @@ const Posts = () => {
   const { subActiveIndex, handleSubActiveIndex } = useSubHeaderIndex();
 
   return (
-    <Box className="z-0">
+    <Box className="z-0 w-4/6">
       {activeIndex === 0 && <Community posts={postArrMock1} />}
       {activeIndex === 1 && subActiveIndex === 0 && (
         <HotMonth posts={postArrMock1} />

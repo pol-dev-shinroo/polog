@@ -9,7 +9,7 @@ interface IPost {
 }
 
 const Post = ({
-  item: { title, subTitle, dateWritten, likeCnt, commentCnt },
+  item: { title, subTitle, dateWritten, likeCnt, commentCnt, img },
 }: IPost) => {
   const { isDark } = useDark();
   return (
@@ -23,7 +23,7 @@ const Post = ({
         <FramerFlex className="w-full h-3/6">
           <img
             className="w-full h-full object-fit rounded-t-2xl"
-            src="https://media4.giphy.com/media/YWf50NNii3r4k/giphy.gif"
+            src={img}
             alt="Gif"
           />
         </FramerFlex>
