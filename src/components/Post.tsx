@@ -1,8 +1,16 @@
 import { useDark } from "src/hooks";
 import { FramerFlex, Flex, FramerBtn, Framer, Box, Text } from "src/elements";
 import { Heart, Comments } from "src/svg";
+import { TPost } from "src/models";
 
-const Post = () => {
+interface IPost {
+  id: number;
+  item: TPost;
+}
+
+const Post = ({
+  item: { title, subTitle, dateWritten, likeCnt, commentCnt },
+}: IPost) => {
   const { isDark } = useDark();
   return (
     <Framer
@@ -27,7 +35,7 @@ const Post = () => {
         >
           {/* Title */}
           <Text tagName="h3" darkClasses={["dark:text-slate-50"]}>
-            Title Title Title Title
+            {title}
           </Text>
           {/* Sub-Title */}
           <Text
@@ -35,10 +43,7 @@ const Post = () => {
             darkClasses={["dark:text-slate-50"]}
             className="ext-ellipsis overflow-hidden"
           >
-            Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title
-            Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title
-            Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title
-            Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title
+            {subTitle}
           </Text>
         </FramerFlex>
         <FramerFlex
@@ -58,7 +63,7 @@ const Post = () => {
               darkClasses={["dark:text-gray-500"]}
               className="text-sm"
             >
-              · 5 days ago
+              · {dateWritten} days ago
             </Text>
           </FramerFlex>
           <FramerFlex
@@ -112,7 +117,7 @@ const Post = () => {
                   darkClasses={["dark:text-gray-400"]}
                   className="mb-0.5"
                 >
-                  12
+                  {commentCnt}
                 </Text>
               </Flex>
               <Flex justify="end" className="w-1/2">
@@ -129,7 +134,7 @@ const Post = () => {
                   darkClasses={["dark:text-gray-400"]}
                   className="mb-0.5"
                 >
-                  12
+                  {likeCnt}
                 </Text>
               </Flex>
             </Flex>

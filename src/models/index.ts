@@ -88,3 +88,14 @@ export type TSubHeaderIndex = 0 | 1 | 2;
 /*******************  Types for grid *****************/
 
 export type TGrid = string;
+
+/*******************  Types for Post *****************/
+
+export type TPost = {
+  id: number;
+  title: string;
+  subTitle: string;
+  dateWritten: number;
+  likeCnt: number;
+  commentCnt: number;
+};

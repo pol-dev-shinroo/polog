@@ -1,237 +1,60 @@
-export const postArrMock1 = [
-  {
-    id: 1,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 4,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 5,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 6,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 7,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 8,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 9,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-];
+import { TPost } from "src/models/index";
 
-export const postArrMock2 = [
-  {
-    id: 1,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 4,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 5,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 6,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 7,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 8,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 9,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-];
+type TPostMock = TPost[];
 
-export const postArrMock3 = [
+export const postArrMock1: TPostMock = [
   {
     id: 1,
-    title: "Post 1",
-    content: "Content for post 1",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
   {
     id: 2,
-    title: "Post 2",
-    content: "Content for post 2",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
   {
     id: 3,
-    title: "Post 3",
-    content: "Content for post 3",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
   {
     id: 4,
-    title: "Post 1",
-    content: "Content for post 1",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
   {
     id: 5,
-    title: "Post 2",
-    content: "Content for post 2",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
   {
     id: 6,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 7,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 8,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 9,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-];
-export const postArrMock4 = [
-  {
-    id: 1,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 4,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 5,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 6,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 7,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 8,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 9,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-];
-export const postArrMock5 = [
-  {
-    id: 1,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 4,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 5,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 6,
-    title: "Post 3",
-    content: "Content for post 3",
-  },
-  {
-    id: 7,
-    title: "Post 1",
-    content: "Content for post 1",
-  },
-  {
-    id: 8,
-    title: "Post 2",
-    content: "Content for post 2",
-  },
-  {
-    id: 9,
-    title: "Post 3",
-    content: "Content for post 3",
+    title: "Title Title Title Title",
+    subTitle:
+      "Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-title Sub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-titleSub-title",
+    dateWritten: 5,
+    likeCnt: 15,
+    commentCnt: 20,
   },
 ];
