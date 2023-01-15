@@ -11,7 +11,7 @@ const Post = () => {
       whileHover={hover}
       lightClasses={["bg-slate-50", "bg-opacity-70"]}
       darkClasses={["dark:bg-zinc-700", "dark:bg-opacity-70"]}
-      className="rounded-2xl w-96 h-96 hover:shadow-md hover:shadow-gray-500 cursor-pointer"
+      className="rounded-2xl w-96 h-96 hover:shadow-md hover:shadow-gray-500 cursor-pointer z-10"
     >
       <FramerFlex justify="center" direction="col" className="h-full">
         <FramerFlex className="w-full h-3/6">
