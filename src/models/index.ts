@@ -80,6 +80,8 @@ export type TExit = object;
 
 export type TFill = string;
 
+export type TSvgPath = string;
+
 /*******************  Types for Header + SubHeader index *****************/
 
 export type THeaderIndex = 0 | 1 | 2;

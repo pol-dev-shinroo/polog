@@ -8,6 +8,7 @@ import Framer from "./Framer";
 import FramerText from "./FramerText";
 import FramerBtn from "./FramerBtn";
 import Grid from "./Grid";
+import Svg from "./Svg";
 
 export {
   Flex,
@@ -20,4 +21,5 @@ export {
   FramerText,
   FramerBtn,
   Grid,
+  Svg,
 };

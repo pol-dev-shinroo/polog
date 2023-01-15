@@ -41,7 +41,7 @@ const Post = ({
           <Text
             tagName="p"
             darkClasses={["dark:text-slate-50"]}
-            className="ext-ellipsis overflow-hidden"
+            className="text-ellipsis overflow-hidden"
           >
             {subTitle}
           </Text>
