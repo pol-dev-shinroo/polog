@@ -6,15 +6,16 @@ import {
   TrendAll,
   New,
   Followers,
+  Home,
 } from "src/pages/main";
 
 const Main = () => {
   return (
     <Routes>
       {/* followers */}
-      <Route path="/" element={<Followers />} />
+      <Route path="/" element={<Home />} />
       {/* trending - 1) all */}
-      <Route path="/" element={<TrendAll />} />
+      {/* <Route path="/" element={<TrendAll />} /> */}
       {/* trending - 1) today */}
       <Route path="/today" element={<TrendToday />} />
       {/* trending - 1) week */}

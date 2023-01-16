@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-import { Dark, Box, Flex } from "src/elements";
+import Router from "src/routes/Router";
+import { Dark, Box } from "src/elements";
 import { useDark } from "src/hooks";
-import { Header, RightMenu, Posts, LeftMenu } from "src/layout";
 
 function App() {
   const { isDark } = useDark();
@@ -14,17 +14,8 @@ function App() {
         transitionClasses={["transition-colors", "duration-700"]}
         className="h-full w-full"
       >
-        <Header />
         <BrowserRouter>
-          <Flex
-            justify="between"
-            direction="row"
-            className="w-full pt-11 px-24"
-          >
-            <LeftMenu />
-            <Posts />
-            <RightMenu />
-          </Flex>
+          <Router />
         </BrowserRouter>
       </Box>
     </Dark>
