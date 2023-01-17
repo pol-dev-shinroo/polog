@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { Main, Personal } from "src/routes/components";
+import { Main } from "src/routes/components";
+import Write from "src/pages/Write";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/*" element={<Main />} />
-      <Route path="/personal/*" element={<Personal />} />
+      <Route path="/write/*" element={<Write />} />
     </Routes>
   );
 };

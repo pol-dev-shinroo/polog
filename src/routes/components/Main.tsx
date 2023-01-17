@@ -8,6 +8,7 @@ import {
   Followers,
   Home,
 } from "src/pages/main";
+import NotFound from "src/pages/NotFound";
 
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
       <Route path="/month" element={<TrendMonth />} />
       {/* new */}
       <Route path="/new" element={<New />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
