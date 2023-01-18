@@ -4,14 +4,14 @@ import { createGlobalStyle } from "styled-components";
 import tw, { theme, GlobalStyles as BaseStyles } from "twin.macro";
 
 const CustomStyles = createGlobalStyle`
-  body {
+  /* body {
     -webkit-tap-highlight-color: ${theme`colors.purple.500`};
     ${tw`antialiased `}
-  }
-  *{
+  } */
+  /* *{
     ${tw`m-0 p-0 box-border`}
-  }
-  h1 {
+  } */
+  /* h1 {
     ${tw`text-4xl font-bold`}
   }
   h2 {
@@ -25,7 +25,7 @@ const CustomStyles = createGlobalStyle`
   }
   span {
     ${tw`text-sm font-normal`}
-  }
+  } */
 `;
 
 const GlobalStyles = () => (
