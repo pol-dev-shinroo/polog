@@ -25,6 +25,7 @@ interface FlexProps {
   positionClasses?: TPosition;
   zIndex?: TZindex;
   children?: TChildren;
+  style?: {};
 }
 interface ContainerProps {
   align?: Align;
@@ -44,6 +45,7 @@ const Flex = ({
   positionClasses,
   zIndex,
   children,
+  style,
 }: FlexProps) => {
   return (
     <Container
@@ -58,6 +60,7 @@ const Flex = ({
         zIndex: zIndex,
       })}
       onClick={onClick}
+      style={style}
     >
       {children}
     </Container>
