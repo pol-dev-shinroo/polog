@@ -23,3 +23,9 @@ export const writeTagNameAtom = atom({
   key: "WRITE_TAG_NAME",
   default: [] as string[],
 });
+
+/**MDEditor */
+export const MDTextsAtom = atom({
+  key: "WRITE_MDE",
+  default: "" as string | undefined,
+});

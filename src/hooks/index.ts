@@ -5,6 +5,7 @@ import useCounter from "./useCounter";
 import useRouter from "./useRouter";
 import useTextArea from "./useTextArea";
 import useTagName from "./useTagName";
+import useMDEditor from "./useMDEditor";
 
 export {
   useDark,
@@ -14,4 +15,5 @@ export {
   useRouter,
   useTextArea,
   useTagName,
+  useMDEditor,
 };

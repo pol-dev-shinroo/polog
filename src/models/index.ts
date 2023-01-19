@@ -42,6 +42,10 @@ export type TTransitionClass = string[] | undefined;
 
 export type TZindex = "z-0" | "z-10" | "z-20" | "z-30" | "z-40" | "z-50";
 
+/*******************  Types for hover ***********************/
+
+export type THover = string[] | undefined;
+
 /*******************  Types for tagNames *********************/
 
 export type TBoxTag = "div" | "header";

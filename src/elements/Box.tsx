@@ -7,6 +7,7 @@ import {
   TChildren,
   TTransitionClass,
   TPosition,
+  THover,
 } from "src/models";
 
 type TBox = {
@@ -17,6 +18,7 @@ type TBox = {
   transitionClasses?: TTransitionClass;
   positionClasses?: TPosition;
   children?: TChildren;
+  hover?: THover;
 };
 
 const Box: React.FC<TBox> = forwardRef((props, ref) => {
@@ -28,6 +30,7 @@ const Box: React.FC<TBox> = forwardRef((props, ref) => {
     transitionClasses,
     positionClasses,
     children,
+    hover,
   } = props;
 
   return React.createElement(
@@ -39,6 +42,7 @@ const Box: React.FC<TBox> = forwardRef((props, ref) => {
         dark: dark(lightClasses, darkClasses),
         className,
         position: positionClasses,
+        hover,
       }),
     },
     children
