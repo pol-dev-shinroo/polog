@@ -19,10 +19,17 @@ type TTextArea = {
   cols?: TCols;
   rows?: TRows;
   value: TValue;
-  maxRows: TMaxRows;
+  maxRows?: TMaxRows;
+  readOnly?: boolean;
 };
 
-const TextArea = ({ onChange, value, maxRows, className }: TTextArea) => {
+const WriteHeaderTextArea = ({
+  onChange,
+  value,
+  maxRows,
+  className,
+  readOnly,
+}: TTextArea) => {
   const [rowCount, setRowCount] = useState(1);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -38,8 +45,10 @@ const TextArea = ({ onChange, value, maxRows, className }: TTextArea) => {
       const textAreaHeight = textArea.offsetHeight;
       const textHeight = textArea.scrollHeight;
       if (textHeight > textAreaHeight) {
-        if (rowCount <= maxRows) {
-          setRowCount((rowCount) => rowCount + 1);
+        if (maxRows) {
+          if (rowCount <= maxRows) {
+            setRowCount((rowCount) => rowCount + 1);
+          }
         }
       }
     }
@@ -54,6 +63,7 @@ const TextArea = ({ onChange, value, maxRows, className }: TTextArea) => {
       className={className}
       rows={rowCount}
       maxLength={179}
+      readOnly={readOnly}
     ></StTextArea>
   );
 };
@@ -62,6 +72,7 @@ const StTextArea = styled.textarea`
   resize: none;
   overflow: hidden;
   min-height: 100%;
+  outline: none;
 `;
 
-export default TextArea;
+export default WriteHeaderTextArea;

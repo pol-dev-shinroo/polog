@@ -1,20 +1,11 @@
-import { Flex, Box, TextArea } from "src/elements";
-import { useTextArea } from "src/hooks";
+import { Flex, Box } from "src/elements";
+import { LeftHeadingTextArea } from "src/partials/write";
 
 const LeftBox = () => {
-  const { handleHeading, writeHeading } = useTextArea();
-
   return (
     <Flex direction="col" className="w-1/2 border-8 border-purple-700">
       {/* heading textarea */}
-      <Flex className="w-full border-8 border-blue-700">
-        <TextArea
-          onChange={handleHeading}
-          value={writeHeading}
-          maxRows={4}
-          className="w-full text-4xl font-bold bg-gray-900 text-slate-50 border-8 border-yellow-400"
-        ></TextArea>
-      </Flex>
+      <LeftHeadingTextArea />
       {/* keywords textarea */}
       <Flex className="w-full border-8 border-blue-700"></Flex>
       {/* WYGIWYS textarea */}
