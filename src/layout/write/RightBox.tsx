@@ -6,15 +6,15 @@ import { useMDEditor } from "src/hooks";
 const RightBox = () => {
   const { MDTexts } = useMDEditor();
   return (
-    <Flex direction="col" className="w-1/2 border-8 border-purple-700">
+    <Flex direction="col" className="w-1/2 h-full border-8 border-purple-700">
       {/* heading textarea */}
       <RightHeadingPreview />
       {/* WYGIWYS preview */}
-      <div data-color-mode="dark">
+      <div data-color-mode="dark" className="h-full">
         <Flex className="w-full h-full">
           <MDEditor.Markdown
             source={MDTexts}
-            className="w-full h-full p-20 overflow-y-scroll"
+            className="w-full  p-20 overflow-y-scroll"
           />
         </Flex>
       </div>
