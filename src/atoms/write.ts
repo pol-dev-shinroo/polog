@@ -17,3 +17,9 @@ export const writeKeywordsAtom = atom({
   key: "WRITE_KEYWORDS",
   default: "",
 });
+
+/**tagName */
+export const writeTagNameAtom = atom({
+  key: "WRITE_TAG_NAME",
+  default: [] as string[],
+});

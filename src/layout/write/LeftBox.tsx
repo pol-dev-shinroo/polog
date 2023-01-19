@@ -1,5 +1,5 @@
 import { Flex, Box } from "src/elements";
-import { LeftHeadingTextArea } from "src/partials/write";
+import { LeftHeadingTextArea, LeftTagNames } from "src/partials/write";
 
 const LeftBox = () => {
   return (
@@ -7,11 +7,11 @@ const LeftBox = () => {
       {/* heading textarea */}
       <LeftHeadingTextArea />
       {/* keywords textarea */}
-      <Flex className="w-full border-8 border-blue-700"></Flex>
+      <LeftTagNames />
       {/* WYGIWYS textarea */}
-      <Box className="w-full  border-8 border-purple-700"></Box>
+      <Box className="w-full border-8 border-purple-700"></Box>
       {/* bottom buttons */}
-      <Flex className="w-full  border-8 border-blue-700"></Flex>
+      <Flex className="w-full border-8 border-blue-700"></Flex>
     </Flex>
   );
 };

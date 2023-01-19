@@ -56,6 +56,8 @@ export type TOnClick = () => void;
 
 export type TOnChange = React.ChangeEventHandler<HTMLTextAreaElement>;
 
+export type TOnChangeInput = React.ChangeEventHandler<HTMLInputElement>;
+
 /*******************  Types for children *********************/
 
 export type TChildren = React.ReactNode;
@@ -122,3 +124,7 @@ export type TCols = number;
 export type TRows = number;
 
 export type TMaxRows = number;
+
+/*******************  Types for onKeyPress *****************/
+
+export type TOnKeyPress = React.KeyboardEventHandler<HTMLInputElement>;

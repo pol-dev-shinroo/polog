@@ -18,6 +18,8 @@ import {
   TAnimate,
   TInitial,
   TExit,
+  TWhileHover,
+  TWhileTap,
 } from "src/models";
 
 interface IStFramerFlex {
@@ -46,6 +48,8 @@ interface IFramerFlexProps {
   framerAnimate?: TAnimate;
   framerInitial?: TInitial;
   framerExit?: TExit;
+  whileHover?: TWhileHover;
+  whileTap?: TWhileTap;
 }
 
 const FramerFlex = ({
@@ -67,6 +71,8 @@ const FramerFlex = ({
   framerAnimate,
   framerInitial,
   framerExit,
+  whileHover,
+  whileTap,
 }: IFramerFlexProps) => {
   return (
     <StFramerFlex
@@ -86,6 +92,8 @@ const FramerFlex = ({
       animate={framerAnimate}
       initial={framerInitial}
       exit={framerExit}
+      whileHover={whileHover}
+      whileTap={whileTap}
       ref={ref}
     >
       {children}

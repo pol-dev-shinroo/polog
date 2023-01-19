@@ -10,6 +10,7 @@ const LeftHeadingTextArea = () => {
         onChange={handleHeading}
         value={writeHeading}
         maxRows={4}
+        placeholder="Write Title here..."
         className="w-full text-4xl font-bold bg-gray-900 text-slate-50 "
       ></WriteHeaderTextArea>
     </Flex>
