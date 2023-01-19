@@ -20,24 +20,8 @@ const Write = () => {
     setMarkdownValue(value);
     console.log(event);
   };
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (event.key === "Enter") {
-      // // event.preventDefault();
-      // // const textArea = event.target as HTMLTextAreaElement;
-      // // const cursorPos = textArea.selectionStart;
-      // // setMarkdownValue(
-      // //   textArea.value.slice(0, cursorPos) +
-      // //     "\n" +
-      // //     textArea.value.slice(cursorPos)
-      // // );
-      // alert("hi");
-    }
-  };
   return (
-    <Flex
-      direction="col"
-      className="min-h-screen h-screen border-8 border-red-700"
-    >
+    <Flex direction="col" className="min-h-screen">
       <Flex
         align="center"
         justify="between"
@@ -54,31 +38,28 @@ const Write = () => {
           </FramerBtn>
         </Flex>
       </Flex>
-      <div
-        data-color-mode="dark"
-        className="w-full h-full border-8 border-purple-400"
-      >
+      <div data-color-mode="dark" className="w-full">
         <Flex direction="row" className="w-full h-full">
           <Flex
             justify="between"
             direction="col"
             className="w-1/2 h-full border-8 border-green-600"
           >
-            <Flex className="h-full">
+            <Flex className="h-full overflow-y-scroll">
               <MDEditor
                 preview="edit"
                 visibleDragbar={false}
                 extraCommands={[]}
                 value={markdownValue}
                 onChange={handleChange}
-                height={windowHeight - 200}
                 className="w-full"
                 style={{ marginTop: "0.5px" }}
               />
             </Flex>
+            {/* Button Box */}
             <Flex
               justify="end"
-              className="w-full h-full bg-gray-800 border-8 border-zinc-700"
+              className="w-full h-20 bg-gray-800 border-8 border-zinc-700"
             >
               <Flex
                 justify="between"

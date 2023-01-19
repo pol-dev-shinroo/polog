@@ -52,6 +52,10 @@ export type TTextTag = "h1" | "h2" | "h3" | "p" | "span";
 
 export type TOnClick = () => void;
 
+/*******************  Types for onChange **********************/
+
+export type TOnChange = React.ChangeEventHandler<HTMLTextAreaElement>;
+
 /*******************  Types for children *********************/
 
 export type TChildren = React.ReactNode;
@@ -102,3 +106,19 @@ export type TPost = {
   commentCnt: number;
   img: string;
 };
+
+/*******************  Types for input value *****************/
+
+export type TValue = string;
+
+/*******************  Types for TextArea *****************/
+
+export type TName = string;
+
+export type TId = string;
+
+export type TCols = number;
+
+export type TRows = number;
+
+export type TMaxRows = number;
