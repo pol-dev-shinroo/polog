@@ -10,7 +10,7 @@ const RightHeadingPreview = () => {
         readOnly={true}
         value={writeHeading}
         maxRows={4}
-        className="w-full text-4xl font-bold bg-gray-900 text-slate-50 "
+        className="w-full text-4xl font-bold bg-gray-900 text-slate-50  "
       ></WriteHeaderTextArea>
     </Flex>
   );

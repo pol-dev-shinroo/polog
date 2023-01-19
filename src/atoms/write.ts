@@ -29,3 +29,9 @@ export const MDTextsAtom = atom({
   key: "WRITE_MDE",
   default: "" as string | undefined,
 });
+
+/**toggle for openAI */
+export const ToggleOpenAIAtom = atom({
+  key: "TOGGLE_OPEN",
+  default: false as boolean,
+});

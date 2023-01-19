@@ -2,8 +2,13 @@ import { Flex, Input, FramerFlex } from "src/elements";
 import { useTagName } from "src/hooks";
 
 const LeftTagNames = () => {
-  const { writeTagNames, newTags, handleWriteNewTags, handleKeyPress } =
-    useTagName();
+  const {
+    writeTagNames,
+    newTags,
+    handleWriteNewTags,
+    handleKeyPress,
+    handleDelete,
+  } = useTagName();
   return (
     <Flex
       align="center"
@@ -12,6 +17,7 @@ const LeftTagNames = () => {
       {writeTagNames.map((tag, index) => (
         <FramerFlex
           key={index}
+          onClick={() => handleDelete(tag)}
           align="center"
           whileHover={hover}
           whileTap={tap}

@@ -9,19 +9,37 @@ const useTagName = () => {
 
   const handleWriteNewTags = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target as HTMLInputElement;
-    setNewTags(value);
+    if (writeTagNames.length < 11) {
+      setNewTags(value);
+    } else {
+      alert("max tag no:10");
+    }
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       const isTagExist = writeTagNames.find((tag) => tag === newTags);
-      if (!isTagExist && newTags.length !== 0) {
+      if (!isTagExist && newTags.length !== 0 && writeTagNames.length < 11) {
         setWriteTagNames([...writeTagNames, newTags]);
         setNewTags("");
       }
     }
   };
-  return { writeTagNames, newTags, handleWriteNewTags, handleKeyPress };
+
+  const handleDelete = (target: string) => {
+    setWriteTagNames((prev) => {
+      return prev.filter((item) => {
+        return item !== target;
+      });
+    });
+  };
+  return {
+    writeTagNames,
+    newTags,
+    handleWriteNewTags,
+    handleKeyPress,
+    handleDelete,
+  };
 };
 
 export default useTagName;
