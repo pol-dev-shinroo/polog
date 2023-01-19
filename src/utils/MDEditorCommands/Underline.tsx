@@ -2,11 +2,11 @@ import { TextState, TextAreaTextApi, ICommand } from "@uiw/react-md-editor";
 import { Box } from "src/elements";
 
 const underLine: ICommand = {
-  name: "title3",
-  keyCommand: "title3",
+  name: "underline",
+  keyCommand: "underline",
   buttonProps: { "aria-label": "put a line through" },
   icon: (
-    <Box hover={["hover:bg-grey-600"]} className="text-lg line-through">
+    <Box hover={["hover:bg-grey-600"]} className="text-lg w-6 h-6 line-through">
       T
     </Box>
   ),

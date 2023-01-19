@@ -6,7 +6,7 @@ const bold: ICommand = {
   keyCommand: "title3",
   buttonProps: { "aria-label": "make text bold" },
   icon: (
-    <Box hover={["hover:bg-grey-600"]} className="text-lg">
+    <Box hover={["hover:bg-grey-600"]} className="text-lg w-6 h-6">
       B
     </Box>
   ),

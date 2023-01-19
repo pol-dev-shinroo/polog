@@ -7,6 +7,10 @@ import {
   bold,
   italic,
   underLine,
+  link,
+  quote,
+  code,
+  image,
 } from "src/utils/MDEditorCommands";
 import { Flex, Box } from "src/elements";
 import { LeftHeadingTextArea, LeftTagNames } from "src/partials/write";
@@ -38,6 +42,10 @@ const LeftBox = () => {
               italic,
               underLine,
               commands.divider,
+              link,
+              quote,
+              code,
+              image,
             ]}
             extraCommands={[]}
             visibleDragbar={false}
