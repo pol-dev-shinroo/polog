@@ -7,7 +7,7 @@ import TrendMonth from "./main/TrendMonth";
 import TrendToday from "./main/TrendToday";
 import TrendWeek from "./main/TrendWeek";
 
-import WriteFinal from "./write/WriteFinal";
+import Write from "./write/Write";
 
 export {
   NotFound,
@@ -18,5 +18,5 @@ export {
   TrendMonth,
   TrendToday,
   TrendWeek,
-  WriteFinal,
+  Write,
 };
