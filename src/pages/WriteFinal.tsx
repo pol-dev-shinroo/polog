@@ -5,13 +5,10 @@ import { Header, LeftBox, RightBox, OpenAI } from "src/layout/write";
 const WriteFinal = () => {
   return (
     // whole screen
-    <Flex direction="col" className="w-full h-screen border-8 border-red-700">
+    <Flex direction="col" className="w-full h-full">
       <Header />
       {/* body */}
-      <Flex
-        direction="row"
-        className="w-full h-full border-8 border-green-700 bg-gray-900"
-      >
+      <Flex direction="row" className="w-full bg-gray-900">
         <LeftBox />
         <RightBox />
         <OpenAI />

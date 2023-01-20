@@ -1,6 +1,7 @@
 import { useToggleWrite } from "src/hooks";
 import { FramerFlex, Framer } from "src/elements";
 import { FirstOpenAIMsg } from "src/partials/write";
+
 const OpenAI = () => {
   const { toggleAI } = useToggleWrite();
 

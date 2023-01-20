@@ -19,7 +19,7 @@ const LeftMDEditor = () => {
   const { MDTexts, handleMDChange } = useMDEditor();
 
   return (
-    <Box className="w-full h-full border-8 border-purple-700">
+    <Box className="w-full">
       <div data-color-mode="dark">
         <MDEditor
           value={MDTexts}
@@ -40,7 +40,7 @@ const LeftMDEditor = () => {
             code,
             image,
           ]}
-          height={750}
+          height={window.innerHeight - 64 - 64 - 65}
           extraCommands={[]}
           visibleDragbar={false}
         />

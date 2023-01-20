@@ -12,7 +12,7 @@ const LeftTagNames = () => {
   return (
     <Flex
       align="center"
-      className="w-full bg-gray-900 flex-wrap border-8 border-yellow-700"
+      className="w-full  min-h-14 max-h-fit bg-gray-900 flex-wrap p-4 border-gray-500 border-r-2"
     >
       {writeTagNames.map((tag, index) => (
         <FramerFlex

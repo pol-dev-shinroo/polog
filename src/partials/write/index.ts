@@ -3,6 +3,7 @@ import RightHeadingPreview from "./RightHeadingPreview";
 import LeftTagNames from "./LeftTagNames";
 import LeftMDEditor from "./LeftMDEditor";
 import FirstOpenAIMsg from "./FirstOpenAIMsg";
+import LeftButtons from "./LeftButtons";
 
 export {
   LeftHeadingTextArea,
@@ -10,4 +11,5 @@ export {
   LeftTagNames,
   LeftMDEditor,
   FirstOpenAIMsg,
+  LeftButtons,
 };
