@@ -40,7 +40,7 @@ const LeftMDEditor = () => {
             code,
             image,
           ]}
-          height={window.innerHeight - 64 - 64 - 65}
+          height={window.innerHeight - 64 - 64 - 35}
           extraCommands={[]}
           visibleDragbar={false}
         />

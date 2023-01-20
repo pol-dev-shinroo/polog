@@ -9,15 +9,16 @@ const RightBox = () => {
 
   if (!toggleAI) {
     return (
-      <Flex direction="col" className="w-1/2  border-8 border-purple-700">
+      <Flex justify="between" direction="col" className="w-1/2">
         {/* heading textarea */}
         <RightHeadingPreview />
         {/* WYGIWYS preview */}
-        <div data-color-mode="dark" className=" border-8 border-purple-700">
+        <div data-color-mode="dark" className="">
           <Flex className="w-full ">
             <MDEditor.Markdown
               source={MDTexts}
-              className="w-full  p-16 overflow-y-scroll"
+              className="w-full h-full p-16 overflow-y-scroll"
+              style={{ height: window.innerHeight - 150 }}
             />
           </Flex>
         </div>

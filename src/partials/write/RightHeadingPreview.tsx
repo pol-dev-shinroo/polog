@@ -5,7 +5,7 @@ import { useTextArea } from "src/hooks";
 const RightHeadingPreview = () => {
   const { writeHeading } = useTextArea();
   return (
-    <Flex className="w-full min-h-16 max-h-fit border-8 border-blue-700">
+    <Flex className="w-full max-h-fit p-7">
       <WriteHeaderTextArea
         readOnly={true}
         value={writeHeading}
