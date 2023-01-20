@@ -3,6 +3,7 @@ import HeaderMenuList from "./HeaderMenuList";
 import HeaderMenuUnderLine from "./HeaderMenuUnderLine";
 import Post from "./Post";
 import WriteHeaderTextArea from "./WriteHeaderTextArea";
+import TagNames from "./TagNames";
 
 export {
   DarkModeToggle,
@@ -10,4 +11,5 @@ export {
   HeaderMenuUnderLine,
   Post,
   WriteHeaderTextArea,
+  TagNames,
 };

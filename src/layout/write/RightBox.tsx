@@ -1,10 +1,9 @@
 import { Flex } from "src/elements";
 import { RightHeadingPreview } from "src/partials/write";
-import MDEditor from "@uiw/react-md-editor";
-import { useMDEditor, useToggleWrite } from "src/hooks";
+import { useToggleWrite } from "src/hooks";
+import { RightMDEditor } from "src/partials/write";
 
 const RightBox = () => {
-  const { MDTexts } = useMDEditor();
   const { toggleAI } = useToggleWrite();
 
   if (!toggleAI) {
@@ -13,15 +12,7 @@ const RightBox = () => {
         {/* heading textarea */}
         <RightHeadingPreview />
         {/* WYGIWYS preview */}
-        <div data-color-mode="dark" className="">
-          <Flex className="w-full ">
-            <MDEditor.Markdown
-              source={MDTexts}
-              className="w-full h-full p-16 overflow-y-scroll"
-              style={{ height: window.innerHeight - 150 }}
-            />
-          </Flex>
-        </div>
+        <RightMDEditor />
       </Flex>
     );
   } else {

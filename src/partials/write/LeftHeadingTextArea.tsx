@@ -5,7 +5,7 @@ import { useTextArea } from "src/hooks";
 const LeftHeadingTextArea = () => {
   const { handleHeading, writeHeading } = useTextArea();
   return (
-    <Flex className="w-full min-h-16 max-h-fit pl-4 border-gray-500 border-r-2">
+    <Flex className="w-full min-h-16 max-h-fit pl-4">
       <WriteHeaderTextArea
         onChange={handleHeading}
         value={writeHeading}
