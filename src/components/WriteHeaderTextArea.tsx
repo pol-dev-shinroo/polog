@@ -22,6 +22,7 @@ type TTextArea = {
   maxRows?: TMaxRows;
   readOnly?: boolean;
   placeholder?: string;
+  style?: {};
 };
 
 const WriteHeaderTextArea = ({
@@ -31,6 +32,7 @@ const WriteHeaderTextArea = ({
   className,
   readOnly,
   placeholder,
+  style,
 }: TTextArea) => {
   const [rowCount, setRowCount] = useState(1);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
@@ -73,6 +75,7 @@ const WriteHeaderTextArea = ({
       maxLength={179}
       readOnly={readOnly}
       placeholder={placeholder}
+      style={style}
     ></StTextArea>
   );
 };
