@@ -1,8 +1,7 @@
 import { Flex } from "src/elements";
-
 import { Header, LeftBox, RightBox, OpenAI } from "src/layout/write";
 
-const WriteFinal = () => {
+const Write = () => {
   return (
     // whole screen
     <Flex direction="col" className="w-full h-scren">
@@ -17,4 +16,4 @@ const WriteFinal = () => {
   );
 };
 
-export default WriteFinal;
+export default Write;

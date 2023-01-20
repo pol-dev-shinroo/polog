@@ -1,5 +1,5 @@
 import { useToggleWrite, useHeight } from "src/hooks";
-import { FramerFlex, Flex } from "src/elements";
+import { Flex } from "src/elements";
 import { FirstOpenAIMsg } from "src/partials/write";
 
 const OpenAI = () => {
@@ -8,7 +8,7 @@ const OpenAI = () => {
 
   if (toggleAI) {
     return (
-      <FramerFlex
+      <Flex
         align="center"
         justify="start"
         direction="col"
@@ -19,8 +19,10 @@ const OpenAI = () => {
         }}
       >
         <FirstOpenAIMsg msg="Hello, how may i help you?" />
-        <Flex>Input</Flex>
-      </FramerFlex>
+        <Flex className="w-full text-slate-50 border-8 border-slate-200">
+          Input
+        </Flex>
+      </Flex>
     );
   } else {
     return null;
