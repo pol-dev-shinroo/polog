@@ -4,6 +4,7 @@ import HeaderMenuUnderLine from "./HeaderMenuUnderLine";
 import Post from "./Post";
 import WriteHeaderTextArea from "./WriteHeaderTextArea";
 import TagNames from "./TagNames";
+import OpenAITextAreaInput from "./OpenAITextAreaInput";
 
 export {
   DarkModeToggle,
@@ -12,4 +13,5 @@ export {
   Post,
   WriteHeaderTextArea,
   TagNames,
+  OpenAITextAreaInput,
 };

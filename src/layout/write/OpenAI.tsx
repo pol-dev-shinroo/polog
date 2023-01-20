@@ -1,6 +1,6 @@
 import { useToggleWrite, useHeight } from "src/hooks";
 import { Flex } from "src/elements";
-import { FirstOpenAIMsg } from "src/partials/write";
+import { OpenAIFirst, OpenAIChat, OpenAIInput } from "src/partials/write";
 
 const OpenAI = () => {
   const { toggleAI } = useToggleWrite();
@@ -10,7 +10,6 @@ const OpenAI = () => {
     return (
       <Flex
         align="center"
-        justify="start"
         direction="col"
         className="h-screen w-1/2"
         style={{
@@ -18,9 +17,13 @@ const OpenAI = () => {
           height: height - 64,
         }}
       >
-        <FirstOpenAIMsg msg="Hello, how may i help you?" />
-        <Flex className="w-full text-slate-50 border-8 border-slate-200">
-          Input
+        <Flex justify="between" direction="col" className="w-full h-full">
+          {/* first message */}
+          <OpenAIFirst />
+          {/* user message + AI messages */}
+          <OpenAIChat />
+          {/* Input button */}
+          <OpenAIInput />
         </Flex>
       </Flex>
     );

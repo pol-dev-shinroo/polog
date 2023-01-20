@@ -24,16 +24,12 @@ const FirstOpenAIMsg: React.FC<IFirstOpenAIMsg> = ({ msg }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentText, setToggleAtLeastOnce, toggleAtLeastOnce]);
   return (
-    <FramerFlex justify="start" className="w-full border-8 border-red-500">
-      <FramerFlex
-        justify="start"
-        direction="col"
-        className="h-full border-4 border-yellow-600"
-      >
-        <Framer className="text-2xl border rounded-lg w-10 h-10">🤖</Framer>
+    <FramerFlex justify="start" className="w-full">
+      <FramerFlex justify="center" direction="col" className="h-full pl-5">
+        <Framer className="text-2xl rounded-lg w-10 h-10">🤖</Framer>
       </FramerFlex>
-      <FramerFlex className="h-full break-normal border-4 border-blue-600">
-        <FramerFlex className="whitespace-pre-wrap break-all text-slate-50">
+      <FramerFlex className="h-full break-normal p-10">
+        <FramerFlex className="whitespace-pre-wrap break-words text-green-400">
           {toggleAtLeastOnce ? msg : finalText}
         </FramerFlex>
       </FramerFlex>

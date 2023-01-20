@@ -7,5 +7,17 @@ import Alarm from "./Alarm";
 import Time from "./Time";
 import Heart from "./Heart";
 import Comments from "./Comments";
+import Send from "./Send";
 
-export { Sun, Moon, Computer, Community, Fire, Alarm, Time, Heart, Comments };
+export {
+  Sun,
+  Moon,
+  Computer,
+  Community,
+  Fire,
+  Alarm,
+  Time,
+  Heart,
+  Comments,
+  Send,
+};
