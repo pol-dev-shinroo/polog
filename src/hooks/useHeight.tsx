@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const useHeight = () => {
   const [height, setHeight] = useState(window.innerHeight);
-  console.log(height);
   useEffect(() => {
     // Update the current height
     setHeight(window.innerHeight);

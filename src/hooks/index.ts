@@ -9,6 +9,7 @@ import useMDEditor from "./useMDEditor";
 import useToggleWrite from "./useToggleWrite";
 import useGenerateText from "./useGenerateText";
 import useHeight from "./useHeight";
+import useNoLineBreaker from "./useNoLineBreaker";
 
 export {
   useDark,
@@ -22,4 +23,5 @@ export {
   useToggleWrite,
   useGenerateText,
   useHeight,
+  useNoLineBreaker,
 };

@@ -1,5 +1,5 @@
 import { Flex } from "src/elements";
-import { FirstOpenAIMsg } from "src/partials/write";
+import { FirstOpenAIMsg } from "src/components";
 
 const OpenAIFirst = () => {
   return (

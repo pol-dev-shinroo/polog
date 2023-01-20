@@ -5,6 +5,7 @@ import Post from "./Post";
 import WriteHeaderTextArea from "./WriteHeaderTextArea";
 import TagNames from "./TagNames";
 import OpenAITextAreaInput from "./OpenAITextAreaInput";
+import FirstOpenAIMsg from "./FirstOpenAIMsg";
 
 export {
   DarkModeToggle,
@@ -14,4 +15,5 @@ export {
   WriteHeaderTextArea,
   TagNames,
   OpenAITextAreaInput,
+  FirstOpenAIMsg,
 };

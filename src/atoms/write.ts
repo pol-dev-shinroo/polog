@@ -3,19 +3,19 @@ import { atom } from "recoil";
 /** main textarea */
 export const writeAtom = atom({
   key: "WRITE_ATOM",
-  default: "",
+  default: "" as string,
 });
 
 /**heading */
 export const writeHeadingAtom = atom({
   key: "WRITE_HEADING",
-  default: "",
+  default: "" as string,
 });
 
 /**keywords */
 export const writeKeywordsAtom = atom({
   key: "WRITE_KEYWORDS",
-  default: "",
+  default: "" as string,
 });
 
 /**tagName */
@@ -40,4 +40,10 @@ export const ToggleOpenAIAtom = atom({
 export const ToggleOpenAIAtleastOneAtom = atom({
   key: "TOGGLE_OPEN_AT_LEAST_ONCE",
   default: false as boolean,
+});
+
+/**openAI chat arrays */
+export const OpenAIChatArrAtom = atom({
+  key: "OPEN_AI_CHAT_ARR",
+  default: [] as string[],
 });
