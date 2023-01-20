@@ -13,10 +13,11 @@ import {
   image,
 } from "src/utils/MDEditorCommands";
 import { Box } from "src/elements";
-import { useMDEditor } from "src/hooks";
+import { useMDEditor, useHeight } from "src/hooks";
 
 const LeftMDEditor = () => {
   const { MDTexts, handleMDChange } = useMDEditor();
+  const { height } = useHeight();
 
   return (
     <Box className="w-full">
@@ -40,7 +41,7 @@ const LeftMDEditor = () => {
             code,
             image,
           ]}
-          height={window.innerHeight - 64 - 64 - 35}
+          height={height - 64 - 64 - 35}
           extraCommands={[]}
           visibleDragbar={false}
         />

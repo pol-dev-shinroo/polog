@@ -50,6 +50,7 @@ interface IFramerFlexProps {
   framerExit?: TExit;
   whileHover?: TWhileHover;
   whileTap?: TWhileTap;
+  style?: {};
 }
 
 const FramerFlex = ({
@@ -65,6 +66,7 @@ const FramerFlex = ({
   zIndex,
   children,
   ref,
+  style,
   /** framer props */
   layout,
   framertransition,
@@ -95,6 +97,7 @@ const FramerFlex = ({
       whileHover={whileHover}
       whileTap={whileTap}
       ref={ref}
+      style={style}
     >
       {children}
     </StFramerFlex>
