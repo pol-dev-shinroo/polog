@@ -8,7 +8,12 @@ const RightBox = () => {
 
   if (!toggleAI) {
     return (
-      <Flex justify="between" direction="col" className="w-1/2">
+      <Flex
+        justify="between"
+        direction="col"
+        className="w-1/2"
+        style={{ backgroundColor: "#0d1117" }}
+      >
         {/* heading textarea */}
         <RightHeadingPreview />
         {/* WYGIWYS preview */}
