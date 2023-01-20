@@ -18,7 +18,7 @@ const useOpenAIInput = () => {
   /**user Input generated => call openAI API => add to chatArr */
   const addToChatArr = async () => {
     setChatArr((prev) => {
-      return [...prev, { type: "user", text: "" }];
+      return [...prev, { type: "user", text: userInput }];
     });
     const res = await getOpenAIResponse({ userInput: userInput });
     setChatArr((prev) => {

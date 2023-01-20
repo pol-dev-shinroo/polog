@@ -22,10 +22,17 @@ const OpenAI = () => {
           {/* first message */}
           <OpenAIFirst />
           {/* user message + AI messages */}
-          {chatArr.map((item, idx) => {
-            const { text, type } = item;
-            return <OpenAIChat id={idx} text={text} />;
-          })}
+          <Flex
+            justify="start"
+            direction="col"
+            className="w-full h-full overflow-y-scroll"
+          >
+            {chatArr.map((item, idx) => {
+              const { text, type } = item;
+              console.log(text);
+              return <OpenAIChat id={idx} text={text} type={type} />;
+            })}
+          </Flex>
 
           {/* Input button */}
           <OpenAIInput />

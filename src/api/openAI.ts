@@ -14,8 +14,8 @@ export const getOpenAIResponse = async ({ userInput }: IGetOpenAIResponse) => {
         temperature: 1,
         max_tokens: 1000,
         top_p: 1,
-        frequency_penalty: 0.5,
-        presence_penalty: 0,
+        frequency_penalty: 1,
+        presence_penalty: 1,
       },
       {
         headers: {
