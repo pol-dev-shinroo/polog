@@ -42,8 +42,13 @@ export const ToggleOpenAIAtleastOneAtom = atom({
   default: false as boolean,
 });
 
+interface ObjectForArr {
+  text: string;
+  type: "user" | "ai";
+}
+
 /**openAI chat arrays */
 export const OpenAIChatArrAtom = atom({
   key: "OPEN_AI_CHAT_ARR",
-  default: [] as string[],
+  default: [] as ObjectForArr[],
 });
