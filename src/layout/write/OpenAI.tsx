@@ -1,17 +1,19 @@
 import { useToggleWrite } from "src/hooks";
-import { FramerFlex } from "src/elements";
+import { FramerFlex, Framer } from "src/elements";
+import { FirstOpenAIMsg } from "src/partials/write";
 const OpenAI = () => {
   const { toggleAI } = useToggleWrite();
+
   if (toggleAI) {
     return (
       <FramerFlex
+        align="center"
+        justify="start"
         direction="col"
-        // framerInitial={{ x: 1000, opacity: 0 }}
-        // framerAnimate={{ x: 0, opacity: 1 }}
-        // framerExit={{ x: 0, opacity: 0 }}
-        // framertransition={{ duration: 0.5 }}
         className={`h-full w-1/2 border-8 border-purple-700`}
-      ></FramerFlex>
+      >
+        <FirstOpenAIMsg msg="Hello, how may i help you?" />
+      </FramerFlex>
     );
   } else {
     return null;

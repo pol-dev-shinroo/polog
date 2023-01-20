@@ -7,6 +7,7 @@ import useTextArea from "./useTextArea";
 import useTagName from "./useTagName";
 import useMDEditor from "./useMDEditor";
 import useToggleWrite from "./useToggleWrite";
+import useGenerateText from "./useGenerateText";
 
 export {
   useDark,
@@ -18,4 +19,5 @@ export {
   useTagName,
   useMDEditor,
   useToggleWrite,
+  useGenerateText,
 };

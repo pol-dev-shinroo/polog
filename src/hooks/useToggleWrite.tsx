@@ -1,15 +1,17 @@
 import { useRecoilState } from "recoil";
-import { ToggleOpenAIAtom } from "src/atoms/write";
+import { ToggleOpenAIAtom, ToggleOpenAIAtleastOneAtom } from "src/atoms/write";
 
 /** toggle Preview/ Open AI */
 const useToggleWrite = () => {
   const [toggleAI, setToggleAI] = useRecoilState(ToggleOpenAIAtom);
-
+  const [toggleAtLeastOnce, setToggleAtLeastOnce] = useRecoilState(
+    ToggleOpenAIAtleastOneAtom
+  );
   const handleToggleAI = () => {
     setToggleAI((prev) => !prev);
   };
 
-  return { toggleAI, handleToggleAI };
+  return { toggleAI, handleToggleAI, toggleAtLeastOnce, setToggleAtLeastOnce };
 };
 
 export default useToggleWrite;

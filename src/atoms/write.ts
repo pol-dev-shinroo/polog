@@ -35,3 +35,9 @@ export const ToggleOpenAIAtom = atom({
   key: "TOGGLE_OPEN",
   default: false as boolean,
 });
+
+/**toggle for openAI at least once */
+export const ToggleOpenAIAtleastOneAtom = atom({
+  key: "TOGGLE_OPEN_AT_LEAST_ONCE",
+  default: false as boolean,
+});

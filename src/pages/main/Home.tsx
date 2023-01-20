@@ -5,10 +5,14 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Flex justify="between" direction="row" className="w-full pt-11 px-24">
+      <Flex
+        justify="between"
+        direction="row"
+        className="w-full pt-11 px-24 border-8 border-green-600"
+      >
         <LeftMenu />
         <Posts />
-        <RightMenu />
+        {/* <RightMenu /> */}
       </Flex>
     </>
   );
