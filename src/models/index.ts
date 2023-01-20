@@ -132,3 +132,5 @@ export type TMaxRows = number;
 /*******************  Types for onKeyPress *****************/
 
 export type TOnKeyPress = React.KeyboardEventHandler<HTMLInputElement>;
+
+/*******************  Types for onKeyPress *****************/

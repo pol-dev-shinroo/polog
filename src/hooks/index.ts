@@ -10,6 +10,7 @@ import useToggleWrite from "./useToggleWrite";
 import useGenerateText from "./useGenerateText";
 import useHeight from "./useHeight";
 import useNoLineBreaker from "./useNoLineBreaker";
+import useOpenAIInput from "./useOpenAIInput";
 
 export {
   useDark,
@@ -24,4 +25,5 @@ export {
   useGenerateText,
   useHeight,
   useNoLineBreaker,
+  useOpenAIInput,
 };

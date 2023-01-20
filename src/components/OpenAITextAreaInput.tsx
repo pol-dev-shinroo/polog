@@ -1,8 +1,11 @@
-import { styled } from "twin.macro";
 import React, { useState } from "react";
+import { styled } from "twin.macro";
+import { useOpenAIInput } from "src/hooks";
 
 const TextArea: React.FC = () => {
   const [textareaHeight, setTextareaHeight] = useState<string>("35px");
+  const { userInput, handleUserInput, addToChatArr } = useOpenAIInput();
+  console.log(userInput);
 
   return (
     <StTextArea
@@ -20,6 +23,14 @@ const TextArea: React.FC = () => {
         setTextareaHeight(textarea.style.height);
       }}
       placeholder="write text here"
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          addToChatArr();
+        }
+      }}
+      onChange={handleUserInput}
+      value={userInput}
     ></StTextArea>
   );
 };

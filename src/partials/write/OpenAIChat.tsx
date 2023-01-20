@@ -2,19 +2,20 @@ import { useState, useEffect } from "react";
 import { Flex, Framer } from "src/elements";
 import { useGenerateText, useToggleWrite, useNoLineBreaker } from "src/hooks";
 
-const OpenAIChat = () => {
-  const text =
-    "\n\nHead: Sunhat, Ponytail \nTop: Tank Tops, Short Sleeve Blouses, Strappy Camisole \nPants: Crop Jeans, Bermuda Shorts, High Waisted Skirt \nShoes: Sandals, Flip Flops, Sneakers \nAccessories: Sunglasses, Scarf, Belt";
+interface IOpenAIChat {
+  id: number;
+  text: string;
+}
 
+const OpenAIChat = ({ text }: IOpenAIChat) => {
   const { regexedText } = useNoLineBreaker(text);
   const { toggleAtLeastOnce, setToggleAtLeastOnce } = useToggleWrite();
   const { currentText, indexRef, totalLength } = useGenerateText(
     regexedText,
     10
   );
-  console.log(currentText);
   const [finalText, setFinalText] = useState("");
-  console.log(finalText);
+
   useEffect(() => {
     const handleFinalText = () => {
       setFinalText((prev) => prev + currentText);

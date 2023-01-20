@@ -1,10 +1,11 @@
-import { useToggleWrite, useHeight } from "src/hooks";
+import { useToggleWrite, useHeight, useOpenAIInput } from "src/hooks";
 import { Flex } from "src/elements";
 import { OpenAIFirst, OpenAIChat, OpenAIInput } from "src/partials/write";
 
 const OpenAI = () => {
   const { toggleAI } = useToggleWrite();
   const { height } = useHeight();
+  const { chatArr } = useOpenAIInput();
 
   if (toggleAI) {
     return (
@@ -21,7 +22,11 @@ const OpenAI = () => {
           {/* first message */}
           <OpenAIFirst />
           {/* user message + AI messages */}
-          <OpenAIChat />
+          {chatArr.map((item, idx) => {
+            const { text, type } = item;
+            return <OpenAIChat id={idx} text={text} />;
+          })}
+
           {/* Input button */}
           <OpenAIInput />
         </Flex>

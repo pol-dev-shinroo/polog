@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { OpenAIChatArrAtom } from "src/atoms/write";
+import { getOpenAIResponse } from "src/api/openAI";
 
 const useOpenAIInput = () => {
   /** total chat arr */
   const [chatArr, setChatArr] = useRecoilState(OpenAIChatArrAtom);
+  console.log(chatArr);
 
   /**userInput */
   const [userInput, setUserInput] = useState("");
@@ -13,10 +15,17 @@ const useOpenAIInput = () => {
     setUserInput(value);
   };
 
-  const addToChatArr = (type: "user" | "ai") => {
+  /**user Input generated => call openAI API => add to chatArr */
+  const addToChatArr = async () => {
     setChatArr((prev) => {
-      return [...prev, { type, text: "" }];
+      return [...prev, { type: "user", text: "" }];
     });
+    const res = await getOpenAIResponse({ userInput: userInput });
+    setChatArr((prev) => {
+      return [...prev, { type: "ai", text: res.choices[0].text }];
+    });
+    console.log(res);
+    setUserInput("");
   };
 
   return { chatArr, addToChatArr, userInput, handleUserInput };
