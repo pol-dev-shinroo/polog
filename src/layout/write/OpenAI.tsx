@@ -29,7 +29,6 @@ const OpenAI = () => {
           >
             {chatArr.map((item, idx) => {
               const { text, type } = item;
-              console.log(text);
               return <OpenAIChat id={idx} text={text} type={type} />;
             })}
           </Flex>

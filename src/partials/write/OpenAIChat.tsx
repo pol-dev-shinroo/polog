@@ -9,12 +9,15 @@ interface IOpenAIChat {
 }
 
 const OpenAIChat = ({ text, type }: IOpenAIChat) => {
+  console.log(text);
   const { regexedText } = useNoLineBreaker(text);
+  console.log(regexedText);
   const { toggleAtLeastOnce, setToggleAtLeastOnce } = useToggleWrite();
   const { currentText, indexRef, totalLength } = useGenerateText(
     regexedText,
     10
   );
+  console.log(currentText);
   const [finalText, setFinalText] = useState("");
 
   useEffect(() => {
@@ -26,8 +29,13 @@ const OpenAIChat = ({ text, type }: IOpenAIChat) => {
     if (indexRef.current === totalLength) {
       setToggleAtLeastOnce(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentText, setToggleAtLeastOnce, toggleAtLeastOnce]);
+  }, [
+    currentText,
+    setToggleAtLeastOnce,
+    toggleAtLeastOnce,
+    indexRef,
+    totalLength,
+  ]);
 
   return (
     <Flex justify="start" className="w-full text-slate-50">

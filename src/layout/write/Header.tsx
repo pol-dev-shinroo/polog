@@ -7,15 +7,15 @@ const Header = () => {
   return (
     <Flex justify="between" className="w-full h-16 bg-gray-800">
       <Flex className="pl-5">
-        <FramerBtn
+        {/* <FramerBtn
           onClick={() => handleNavigate("/")}
           className="text-lg rounded-lg hover:font-bold text-slate-50"
         >
           👈 Back
-        </FramerBtn>
+        </FramerBtn> */}
       </Flex>
       <Flex className="pr-5">
-        <FramerBtn
+        {/* <FramerBtn
           onClick={() => {}}
           className="text-lg rounded-lg hover:font-bold text-slate-50 mx-5"
         >
@@ -26,7 +26,7 @@ const Header = () => {
           className="text-lg rounded-lg hover:font-bold text-slate-50 mx-5"
         >
           Post
-        </FramerBtn>
+        </FramerBtn> */}
         <FramerBtn
           onClick={handleToggleAI}
           className="text-lg rounded-lg hover:font-bold text-slate-50 mx-5"

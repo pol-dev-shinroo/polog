@@ -7,6 +7,7 @@ const useGenerateText = (text: string, delay: number) => {
 
   useEffect(() => {
     if (text) {
+      setCurrentText("");
       indexRef.current = 0;
       let intervalId = setTimeout(function animate() {
         const newText = currentText + text[indexRef.current];
@@ -18,7 +19,6 @@ const useGenerateText = (text: string, delay: number) => {
       }, delay);
       return () => clearTimeout(intervalId);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text, delay]);
 
   return { currentText, indexRef, totalLength };
