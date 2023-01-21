@@ -11,9 +11,25 @@ const h1: ICommand = {
     </Box>
   ),
   execute: (state: TextState, api: TextAreaTextApi) => {
-    let modifyText = `# ${state.selectedText}\n`;
+    let modifyText = `
+| Browser          | Node.js          |
+| ---------------- | ---------------- |
+| DOM              | No DOM           |
+| WIndow           | No Window        |
+| Interactive Apps | Server Side Apps |
+| No File system   | File system      |
+| Fragmentation    | Version          |
+| ES6 Modules      | CommonJS         |\n`;
     if (!state.selectedText) {
-      modifyText = `# `;
+      modifyText = `
+| Browser          | Node.js          |
+| ---------------- | ---------------- |
+| DOM              | No DOM           |
+| WIndow           | No Window        |
+| Interactive Apps | Server Side Apps |
+| No File system   | File system      |
+| Fragmentation    | Version          |
+| ES6 Modules      | CommonJS         | `;
     }
     api.replaceSelection(modifyText);
   },
